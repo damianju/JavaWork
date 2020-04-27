@@ -12,7 +12,7 @@ public class Main {
 		for (int i = 0; i < arr1.length; i++) {
 			arr1[i] = sc.nextInt();
 			if (arr1[i] == 0) {
-				break;
+				return;
 			} else if (arr1[i] % 2 == 1) {
 				arr2[i] = arr1[i] * 2;
 				cnt++;
