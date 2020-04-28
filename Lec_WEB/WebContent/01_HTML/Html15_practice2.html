@@ -6,78 +6,207 @@
 <style type="text/css">
 body{
  font-family: "Dotum";
+ font-weight: bold;
+ font-size: 10px;
+ margin: 120px;
 }
 
  table, td{
- 	border: 1px solid black;
+ 	border: 0.5px solid black;
+ 	border-color: gray;
  	border-collapse: collapse;
  	padding: 10px
  }
  
  table{
  	width: 100%
+ 	
  }
  
-nav {
-	border: 1px solid black;
-}
-nav ul li{
- 	list-style-type: none;
- 	display: inline;
+ table#hd{
+ background-color: lightgray;
+ text-align: center;
+ }
+ 
+ table#hd tr td{
 
- 	}
-nav ul li a{
- 	text-decoration: none;
- 	padding: 16px;
- 	
- 	font-weight:bold;
- 	
- 	display: block;
- 	display: inline;
+ border-left-color: lightgray;
+border-right-color: lightgray;
+
  }
  
-nav #list li a:link{
- 	color:black;
- }
- 
-nav #list li a:visited{ /* 방문한 상태  스타일 */
-	color: black;
+ table#hd tr td:hover{
+color: black;
+ 	background-color: SkyBlue;
 }
- 
-nav #list li a:hover{
+
+table#hd tr td:focus{
+
  	color: white;
- 	background-color: blue;
- }
+ background-color: DodgerBlue;
+ 	
+}
 
-#date span {
+table#hd tr td#fr{
+border-left-color: gray;
+}
+
+table#hd tr td#ed{
+border-right-color: gray;
+}
+
+
+
+section#date {
 	text-align: center;
 	font-weight: bold;
 	font-size: 30px;
+	padding: 5px;
+	color: gray;
+}
+
+section#date span#dt{
 	color: blue;
+}
+
+
+table tr#day {
+	background-color: Gainsboro;
+	text-align: center;
+	font-weight: bold;
+} 
+
+article {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+
+
+tr.days td:hover{
+color: white;
+ background-color: DodgerBlue;
+}
+
+tr.days td:focus{
+color: black;
+ 	background-color: SkyBlue;
+ 	
+}
+
+
+td.emt {
+	background-color: GhostWhite;
+}
+
+div#pg {
+	text-align: center;
+}
+
+div#sch {
+	border: 1px solid gray;
+	padding: 10px;
+	background-color: lightgray;
+	text-align: center;
+}
+
+input#tx {
+	width: 400px;
+}
+
+tr.days td {
+	vertical-align: text-top;
+}
+
+table#note td {
+text-align: center;
+border-left-color: #FFFFFF;
+border-right-color: #FFFFFF;
+
+}
+
+tr#ct td {
+
+background-color: lightgray;
+border-left-color: lightgray;
+border-right-color: lightgray;
+border-top-width: 2px;
+border-bottom-width: 2px;
+}
+
+button.num {
+background-color: white;
+border: none;
+display: block;
+display: inline;
+}
+
+button.num:hover {
+color: white;
+ 	background-color: DodgerBlue;
+
+}
+
+td.tt{
+text-align: left;
+}
+
+button.ol {
+font-size: 10px;
+padding: 0.5px;
+color: red;
+border-color: red;
+background: white;
+}
+
+button.dir {
+	background-color: white;
+	color: lightgray;
+	border-color: lightgray;
+}
+
+button#sch2{
+	color: white;
+ 	background-color: DodgerBlue;
+ 	border: none;
+}
+
+div#tx2{
+padding: 3px;
+}
+
+span.t1 {
+color:red;
+}
+
+span.t2{
+font-weight: normal;
 }
  
 </style>
 </head>
 <body>
-	<nav>
-		<ul id="list">
-			<li><a href="">정책차림표</a></li>
-			<li><a href="">미리보는 지원사업</a></li>
-			<li><a href="">마감임박 지원사업</a></li>
-			<li><a href="">접수중인 지원사업</a></li>	
-		</ul>
-	</nav>
+	<table id="hd">
+		<tr>
+			<td id="fr">정책차림표</td>
+			<td>미리보는 지원사업</td>
+			<td>마감임박 지원사업</td>
+			<td id="ed">접수중인 지원사업</td>
+		</tr>
+		
+	</table>
+
 	
 	<section id="date">
 		<span>&lt;</span>
-		<span>2015-06-17</span>
+		<span id="dt">2015-06-17</span>
 		<span>&gt;</span>
 	</section>
 	<section>
 		<table>
 			<tr>
 			<td>
-			<span><input type="radio" name="credit_card" value="personal"/>전체</span>
+			<span><input type="radio" name="credit_card" value="personal" checked/>전체</span>
 			<span><input type="radio" name="credit_card" value="cooporation"/>창업·벤처</span>
 			<span><input type="radio" name="credit_card" value="abroad"/>소상공인</span>
 			<span><input type="radio" name="credit_card" value="abroad"/>판로·수출</span>
@@ -88,8 +217,8 @@ nav #list li a:hover{
 			<tr>
 		</table>
 			<article>
-				<table>
-					<tr>
+				<table id="cd">
+					<tr id="day">
 						<td>일</td>
 						<td>월</td>
 						<td>화</td>
@@ -98,8 +227,8 @@ nav #list li a:hover{
 						<td>금</td>
 						<td>토</td>
 					</tr>
-					<tr>
-						<td></td>
+					<tr class="days">
+						<td class="emt"></td>
 						<td>1</td>
 						<td>2</td>
 						<td>3</td>
@@ -107,7 +236,7 @@ nav #list li a:hover{
 						<td>5</td>
 						<td>6</td>
 					</tr>	
-					<tr>
+					<tr class="days">
 						<td>7</td>
 						<td>8</td>
 						<td>9</td>
@@ -116,7 +245,7 @@ nav #list li a:hover{
 						<td>12</td>
 						<td>13</td>
 					</tr>	
-					<tr>
+					<tr class="days">
 						<td>14</td>
 						<td>15</td>
 						<td>16</td>
@@ -125,7 +254,7 @@ nav #list li a:hover{
 						<td>19</td>
 						<td>20</td>
 					</tr>	
-					<tr>
+					<tr class="days">
 						<td>21</td>
 						<td>22</td>
 						<td>23</td>
@@ -134,30 +263,30 @@ nav #list li a:hover{
 						<td>26</td>
 						<td>27</td>
 					</tr>	
-					<tr>
+					<tr class="days">
 						<td>28</td>
 						<td>29</td>
 						<td>30</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td class="emt"></td>
+						<td class="emt"></td>
+						<td class="emt"></td>
+						<td class="emt"></td>
 					</tr>		
 				</table>
 			</article>
 	</section>
-	
-	<div>
-		<span>·2015년 6월 7일, 전체</span>
-		<span>검색결과,</span>
-		<span>진행중인 사업</span>
-		<span>은</span>
-		<span>총 614건</span>
-		<span>입니다.</span>
+	<br>
+	<div id="tx2">
+		<span class="t1">·2015년 6월 7일, 전체</span>
+		<span class="t2">검색결과,</span>
+		<span >진행중인 사업</span>
+		<span class="t2">은</span>
+		<span class="t1">총 614건</span>
+		<span class="t2">입니다.</span>
 	</div>
 	<div>
-		<table>
-			<tr>
+		<table id="note">
+			<tr id="ct">
 				<td>번호</td>
 				<td>지원사업명</td>
 				<td>주관부처</td>
@@ -166,9 +295,9 @@ nav #list li a:hover{
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>
+				<td class="tt">
 					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
-					<span><button type="button">ON-LINE</button></span>
+					<span><button class="ol" type="button" disabled>ON-LINE</button></span>
 					</td>
 				<td>중소기업청</td>
 				<td>2015.06.04 ~ 2015.06.30</td>
@@ -176,29 +305,29 @@ nav #list li a:hover{
 			</tr>
 			<tr>
 				<td>10</td>
-				<td>
+				<td class="tt">
 					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
-					<span><button type="button">ON-LINE</button></span>
+					<span><button class="ol" type="button" disabled>ON-LINE</button></span>
 				</td>
 				<td>중소기업청</td>
 				<td>2015.06.04 ~ 2015.06.30</td>
 				<td>731</td>
 			</tr>
-			<tr>
+			<tr class="tt">
 				<td>614</td>
 				<td>
 					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
-					<span><button type="button">ON-LINE</button></span>
+					<span><button class="ol" type="button" disabled>ON-LINE</button></span>
 				</td>
 				<td>중소기업청</td>
 				<td>2015.06.04 ~ 2015.06.30</td>
 				<td>731</td>
 			</tr>
-			<tr>
+			<tr class="tt">
 				<td>614</td>
 				<td>
 					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
-					<span><button type="button">ON-LINE</button></span>
+					<span><button class="ol" type="button" disabled>ON-LINE</button></span>
 				</td>
 				<td>중소기업청</td>
 				<td>2015.06.04 ~ 2015.06.30</td>
@@ -208,28 +337,28 @@ nav #list li a:hover{
 		</table>
 	</div>
 	<br>
-	<div>
-		<span><button type="button">&lt;&lt;</button></span>
-		<span><button type="button">&lt;</button></span>
-		<span><button type="button">1</button></span>
-		<span><button type="button">2</button></span>
-		<span><button type="button">3</button></span>
-		<span><button type="button">4</button></span>
-		<span><button type="button">5</button></span>
-		<span><button type="button">&gt;</button></span>
-		<span><button type="button">&gt;&gt;</button></span>
+	<div id="pg">
+		<span><button class="dir" type="button">&lt;&lt;</button></span>
+		<span><button class="dir" type="button">&lt;</button></span>
+		<span><button class="num" type="button">1</button></span>
+		<span><button class="num" type="button">2</button></span>
+		<span><button class="num" type="button">3</button></span>
+		<span><button class="num" type="button">4</button></span>
+		<span><button class="num" type="button">5</button></span>
+		<span><button class="dir" type="button">&gt;</button></span>
+		<span><button class="dir" type="button">&gt;&gt;</button></span>
 	</div>
 	<br>
-	<div>
+	<div id="sch">
 		<span>
 		<select name="search" size="1">
-			<option value="keyword" selected>키워드</option>
 			<option value="title">제목</option>
+			<option value="keyword" selected>키워드</option>
 			<option value="keyword+title">키워드+제목</option>
 		</select>
 		</span>
-		<span><input type="text"></span>
-		<span><button type="submit">검색</button></span>
+		<span><input id="tx" type="text"></span>
+		<span><button id="sch2" type="submit">검색</button></span>
 		
 	</div>
 </body>

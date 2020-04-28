@@ -4,15 +4,83 @@
 <meta charset="UTF-8">
 <title>주문 폼 작성</title>
 <style type="text/css">
+ body{
+ 	font-family: "Dotum";
+ 	vertical-align: middle;
+ }
  table, td{
  	border: 1px solid black;
  	border-collapse: collapse;
- 	padding: 10px
+ 	padding: 5px;
  }
  
- .tb {
- width: 100%;
+ table.tb {
+ min-width: 1000px;
+ border-top-width: 4px;
+ font-size: 80%
+ 
  }
+ 
+ table#tb3 {
+ min-width: 800px;
+ border-top-width: 4px;
+ font-size: 80%
+ 
+ }
+ 
+ 
+ p#note {
+ 	font-size: 75%
+ }
+ 
+ td.ct {
+ font-weight: bold;
+ font-size: 120%;
+ padding-left: 30px;
+ border-right-color: #FFFFFF;
+ border-bottom-color: #FFFFFF;
+ }
+ 
+ td.ct2 {
+  border-bottom-color: #000000;
+ 
+ }
+ 
+ td.tx{
+ 	border-bottom-color: #FFFFFF;
+ }
+ 
+ td.tx2 {
+  border-bottom-color: #000000;
+ 
+ }
+ 
+td#inf span button:focus{
+	color: red;
+	border-color: red;
+}
+
+td.gr {
+	background-color: Gainsboro;
+}
+ 
+td.gr2 {
+	 border-right-color: Gainsboro;
+}
+
+td.gr3 {
+	 border-bottom-color: Gainsboro;
+}
+
+span#date{
+	font-size: 80%;
+	color: blue;
+}
+
+td input.ad{
+ width: 650px;
+}
+
 
 
 </style>
@@ -21,35 +89,35 @@
 <h3>주문자 정보 입력</h3>
 <table class="tb">
 	<tr>
-		<td>주문자 정보</td>
-		<td>
+		<td class="ct">주문자 정보</td>
+		<td class="tx">
 			<span>비회원으로 상품구매 시 반드시 본인인증을 하셔야 합니다.</span>
 			<span><button type="button">휴대폰인증</button></span>
 			<span><button type="button">아이핀인증</button></span>
 		</td>
 	</tr>
 	<tr>
-		<td>주소</td>
-		<td>
-		<span><input type="text"></input></span>
-		<span><button type="button">주소찾기</button></span>
+		<td class="ct">주소</td>
+		<td class="tx">
+		<span><input type="text" disabled></input></span>
+		<span><button type="button" >주소찾기</button></span>
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td>
-		<span><input type="text"></input></span>
+		<td class="ct"></td>
+		<td class="tx">
+		<span><input class="ad" type="text" disabled></input></span>
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td>
-		<span><input type="text"></input></span>
+		<td class="ct"></td>
+		<td class="tx">
+		<span><input class="ad" type="text"></input></span>
 		</td>
 	</tr>
 	<tr>
-		<td>휴대전화</td>
-		<td>
+		<td class="ct">휴대전화</td>
+		<td class="tx">
 			<select>
 				<option value=010 selected>010</option>
 				<option value=011>011</option>
@@ -64,8 +132,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>이메일</td>
-		<td>
+		<td class="ct ct2">이메일</td>
+		<td class="tx tx2">
 			<span><input type="email"></input></span>
 			<span>@</span>
 			<span><input type="email"></input></span>
@@ -81,47 +149,47 @@
 	</tr>
 
 </table>
-	<p>*SK플래닛(주)는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별판매자가 등록한 상품정보 및 거래에 대해 SK플래닛(주)는 일체의 책임을 지지 않습니다.</p>
+	<p id="note">*SK플래닛(주)는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별판매자가 등록한 상품정보 및 거래에 대해 SK플래닛(주)는 일체의 책임을 지지 않습니다.</p>
 
-<br><br>
+<br>
 
 <h3>배송지 정보 입력</h3>
 <table class="tb">
 	<tr>
-		<td>배송지선택</td>
-		<td>
+		<td class="ct gr gr2 gr3">배송지선택</td>
+		<td class="tx gr gr3">
 			<span><button type="button">주문자 정보와 동일</button></span>
 		</td>
 	</tr>
 	<tr>
-		<td>받으시는 분</td>
-		<td>
+		<td class="ct">받으시는 분</td>
+		<td class="tx">
 			<span><input type="text"></input></span>
 		</td>
 	</tr>
 	<tr>
-		<td>주소</td>
-		<td>
-		<span><input type="text"></input></span>
+		<td class="ct">주소</td>
+		<td class="tx">
+		<span><input type="text" disabled></input></span>
 		<span><button type="button">주소찾기</button></span>
 		<span><input type="checkbox" name="address" value="save">배송지목록에 추가</span>
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td>
-		<span><input type="text"></input></span>
+		<td class="ct"></td>
+		<td class="tx">
+		<span><input class="ad" type="text" disabled></input></span>
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td>
-		<span><input type="text"></input></span>
+		<td class="ct"></td>
+		<td class="tx">
+		<span><input class="ad" type="text"></input></span>
 		</td>
 	</tr>
 	<tr>
-		<td>휴대전화</td>
-		<td>
+		<td class="ct">휴대전화</td>
+		<td class="tx">
 			<select>
 				<option value=010 selected>010</option>
 				<option value=011>011</option>
@@ -132,43 +200,46 @@
 			<span><input type="tel"></span>
 			<span>-</span>
 			<span><input type="tel"></span>
-			<span><input type="checkbox" name="safe_number" value="Yes">안심번호 사용(무료)</span>
+			<span><input type="checkbox" name="safe_number" value="Yes" checked>안심번호 사용(무료)</span>
 			<span><input type="checkbox" name="add_home" value="Yes">집전화 추가 입력</span>
 		</td>
 	</tr>
 	<tr>
-		<td>배송시요구사항</td>
-		<td>
-			<span><input type="text"></input></span><br>
-			<span>*특정한 배송일을 지정하고자 할 경우 판매자와 연락하여 배송일을 확인해주시기 바랍니다.</span>
+		<td class="ct ct2">배송시요구사항</td>
+		<td class="tx tx2">
+			<span><input class="ad" type="text"></input></span>
+			<span>(0자/50자)</span>
+			<br>
+			<span id="date">*특정한 배송일을 지정하고자 할 경우 판매자와 연락하여 배송일을 확인해주시기 바랍니다.</span>
+			
 		</td>
 	</tr>
 </table>
-<br><br>
+<br>
 <h3>결제 정보 입력</h3>
-<table class="tb">
+<table class="tb" id="tb3">
 	<tr>
-		<td>신용카드</td>
-		<td>
-			<span><input type="radio" name="credit_card" value="personal"/>신용카드(일반)</span>
+		<td class="ct gr gr2 gr3">신용카드</td>
+		<td class="tx gr gr3">
+			<span><input type="radio" name="credit_card" value="personal" checked/>신용카드(일반)</span>
 			<span><input type="radio" name="credit_card" value="cooporation"/>신용카드(법인)</span>
 			<span><input type="radio" name="credit_card" value="abroad"/>해외발급카드</span>
 		</td>
 	</tr>
 	<tr>
-		<td>현금결제</td>
-		<td>
+		<td class="ct gr gr2 gr3">현금결제</td>
+		<td class="tx gr gr3">
 		<span><input type="radio" name="cash" value="01"/>무통장입금</span>
 		<span><input type="radio" name="cash" value="02"/>실시간계좌이체</span>
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
+		<td class="ct gr gr2 gr3"></td>
+		<td class="tx gr gr3"></td>
 	</tr>
 	<tr>
-		<td>카드선택</td>
-		<td>
+		<td class="ct">카드선택</td>
+		<td class="tx">
 			<select>
 				<option selected>선택하세요</option>
 				<option value=001>신한카드</option>
@@ -178,8 +249,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>할부방식</td>
-		<td>
+		<td class="ct">할부방식</td>
+		<td class="tx">
 			<select>
 				<option value=000 selected>일시불</option>
 				<option value=001>3개월</option>
@@ -189,9 +260,9 @@
 		</td>
 	</tr>
 	<tr>
-		<td>결제안내</td>
-		<td>
-			<span><button type="button">간편결제안내</button></span>
+		<td class="ct ct2">결제안내</td>
+		<td class="tx tx2" id="inf">
+			<span><button type="button" autofocus>간편결제안내</button></span>
 			<span><button type="button">공인인증안내</button></span>
 			<span><button type="button">안전결제안내</button></span>
 			<span><button type="button">안심클릭안내</button></span>
