@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>캘린더 폼 작성</title>
+<style type="text/css">
+body{
+ font-family: "Dotum";
+}
+
+ table, td{
+ 	border: 1px solid black;
+ 	border-collapse: collapse;
+ 	padding: 10px
+ }
+ 
+ table{
+ 	width: 100%
+ }
+ 
+nav {
+	border: 1px solid black;
+}
+nav ul li{
+ 	list-style-type: none;
+ 	display: inline;
+
+ 	}
+nav ul li a{
+ 	text-decoration: none;
+ 	padding: 16px;
+ 	
+ 	font-weight:bold;
+ 	
+ 	display: block;
+ 	display: inline;
+ }
+ 
+nav #list li a:link{
+ 	color:black;
+ }
+ 
+nav #list li a:visited{ /* 방문한 상태  스타일 */
+	color: black;
+}
+ 
+nav #list li a:hover{
+ 	color: white;
+ 	background-color: blue;
+ }
+
+#date span {
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	color: blue;
+}
+ 
+</style>
+</head>
+<body>
+	<nav>
+		<ul id="list">
+			<li><a href="">정책차림표</a></li>
+			<li><a href="">미리보는 지원사업</a></li>
+			<li><a href="">마감임박 지원사업</a></li>
+			<li><a href="">접수중인 지원사업</a></li>	
+		</ul>
+	</nav>
+	
+	<section id="date">
+		<span>&lt;</span>
+		<span>2015-06-17</span>
+		<span>&gt;</span>
+	</section>
+	<section>
+		<table>
+			<tr>
+			<td>
+			<span><input type="radio" name="credit_card" value="personal"/>전체</span>
+			<span><input type="radio" name="credit_card" value="cooporation"/>창업·벤처</span>
+			<span><input type="radio" name="credit_card" value="abroad"/>소상공인</span>
+			<span><input type="radio" name="credit_card" value="abroad"/>판로·수출</span>
+			<span><input type="radio" name="credit_card" value="abroad"/>R&D</span>
+			<span><input type="radio" name="credit_card" value="abroad"/>금융·세제</span>
+			<span><input type="radio" name="credit_card" value="abroad"/>인력</span>
+			</td>
+			<tr>
+		</table>
+			<article>
+				<table>
+					<tr>
+						<td>일</td>
+						<td>월</td>
+						<td>화</td>
+						<td>수</td>
+						<td>목</td>
+						<td>금</td>
+						<td>토</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>	
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+						<td>13</td>
+					</tr>	
+					<tr>
+						<td>14</td>
+						<td>15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+						<td>19</td>
+						<td>20</td>
+					</tr>	
+					<tr>
+						<td>21</td>
+						<td>22</td>
+						<td>23</td>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+						<td>27</td>
+					</tr>	
+					<tr>
+						<td>28</td>
+						<td>29</td>
+						<td>30</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>		
+				</table>
+			</article>
+	</section>
+	
+	<div>
+		<span>·2015년 6월 7일, 전체</span>
+		<span>검색결과,</span>
+		<span>진행중인 사업</span>
+		<span>은</span>
+		<span>총 614건</span>
+		<span>입니다.</span>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td>번호</td>
+				<td>지원사업명</td>
+				<td>주관부처</td>
+				<td>신청기간</td>
+				<td>조회</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>
+					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
+					<span><button type="button">ON-LINE</button></span>
+					</td>
+				<td>중소기업청</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
+				<td>731</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>
+					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
+					<span><button type="button">ON-LINE</button></span>
+				</td>
+				<td>중소기업청</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
+				<td>731</td>
+			</tr>
+			<tr>
+				<td>614</td>
+				<td>
+					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
+					<span><button type="button">ON-LINE</button></span>
+				</td>
+				<td>중소기업청</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
+				<td>731</td>
+			</tr>
+			<tr>
+				<td>614</td>
+				<td>
+					<span>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..</span>
+					<span><button type="button">ON-LINE</button></span>
+				</td>
+				<td>중소기업청</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
+				<td>731</td>
+			</tr>
+			
+		</table>
+	</div>
+	<br>
+	<div>
+		<span><button type="button">&lt;&lt;</button></span>
+		<span><button type="button">&lt;</button></span>
+		<span><button type="button">1</button></span>
+		<span><button type="button">2</button></span>
+		<span><button type="button">3</button></span>
+		<span><button type="button">4</button></span>
+		<span><button type="button">5</button></span>
+		<span><button type="button">&gt;</button></span>
+		<span><button type="button">&gt;&gt;</button></span>
+	</div>
+	<br>
+	<div>
+		<span>
+		<select name="search" size="1">
+			<option value="keyword" selected>키워드</option>
+			<option value="title">제목</option>
+			<option value="keyword+title">키워드+제목</option>
+		</select>
+		</span>
+		<span><input type="text"></span>
+		<span><button type="submit">검색</button></span>
+		
+	</div>
+</body>
+</html>
