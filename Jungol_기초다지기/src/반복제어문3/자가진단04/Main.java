@@ -9,17 +9,19 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
-		
+
 		for (int i = n; i > 0; i--) {
-			//for(int z = 0; z <i ; z++);
-				//System.out.print(" ");
-			for (int j = i; j > 0; j--) {
-				
+			if (i <= n - 1) {
+				for(int z=i; z >0; z--) {
+				System.out.print(" ");
+				}
+			}
+			for (int j = 0; j < i; j++) {
+
 				System.out.print("*");
 			}
 			System.out.println();
 		}
-
 
 		sc.close();
 
