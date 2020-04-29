@@ -112,7 +112,7 @@ article#front{
 	background: #ebebeb;
 	padding: 10px; /*Important*/
 	
-	/*padding: 10px 2px; */
+	/*padding: 10px 2px;*/
 	border-radius: 10px;
 	margin: 0 0 0 20px;
 }
@@ -154,12 +154,14 @@ article#front{
 	background-repeat: no-repeat;
 	background-position: left 15px;
 	border-right: 1px solid #ccc;
+	margin-left: 10px;
 }
 
 #payment{
 	background-image: url(../images/icon3.png);
 	background-repeat: no-repeat;
 	background-position: left 15px;
+	margin-left: 10px;
 }
 
 #sec_news, #news_notice{
@@ -172,7 +174,7 @@ article#front{
 	font-family: seo;
 	font-size: 14px;
 	font-style: italic;
-	font-weight: normal;
+	font-weight: normal; /* 굵기*/
 	width: 420px;
 	height: 24px;
 	background-image: url(../images/h3_back.jpg);
@@ -191,8 +193,8 @@ article#front{
 #sec_news dt {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 16px;
-	margin: 5px 0;
-	color: #F00;
+	margin: 5px 0; /* 아래 여백*/
+	color: #F00; /* 빨간 색*/
 }
 
 #sec_news dt a{
@@ -206,18 +208,18 @@ article#front{
 }
 
 #sec_news dd{
-	margin-left:0;
+	margin-left:0; /* 왼쪽으로 붙이기*/
 	color: #333;
 }
 
 #sec_news dd a{
 	color: #333;
-	text-decoration: none;
+	text-decoration: none; /* 밑 줄 제거*/
 }
 
 #sec_news dd a:hover{
 	color:#F90;
-	text-decoration: underline;
+	text-decoration: underline; 
 }
 
 #news_notice {
@@ -232,9 +234,9 @@ article#front{
 }
 
 #news_notice td{
-	padding: 6px 4px;
+	padding: 6px 4px; /* td 위 아래 & 좌우 여백*/
 	border-bottom-width: 1px;
-	border-bottom-style: dotted;
+	border-bottom-style: dotted; /* 아래 밑줄 점선*/
 	border-bottom-color: #999;
 }
 
@@ -249,10 +251,10 @@ article#front{
 
 #news_notice a {
 	color: #333;
-	text-decoration: none;
+	text-decoration: none; /* 밑 줄 제거*/
 }
 
-#news_notic a:hover{
+#news_notice a:hover{
 	text-decoration: none;
 	color:#F90;
 }
@@ -267,8 +269,9 @@ footer {
 
 footer hr{
 	width: 900px;
-	margin: 0 0 0 15px; /*important*/
-	margin: 0 0 0 35px;
+	/*margin: 0 0 0 15px;*/ /*!important;*/
+	/*margin: 0 0 0 35px;*/
+	
 }
 
 footer #copy {
@@ -281,9 +284,9 @@ footer #copy {
 footer #social{
 	width: 130px;
 	margin: 20px 20px 0 0;
-	float: right;
+	float: right; /* 아이콘  float*/
 }
 
 footer #social img{
-	margin: 0 7px;
+	margin: 0 7px; /* 좌우 여백*/
 }
