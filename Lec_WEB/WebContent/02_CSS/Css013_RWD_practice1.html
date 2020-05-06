@@ -4,8 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{box-sizing: border-box;} /* RWD 필수 */
+        /* 1: 기본 스타일 mobile first */
+        [class*="col-"]{
+            float: left;
+            padding: 15px;
+            width: 100%;
+            font-size: 20px;
+            font-style: bold;
+            color: white;
+            background-color: grey;
+            border: 5px solid white;
+        }
+        
+        .header{
+            display: none;
+            background-color: lightpink;
+        }
+
+        .nav{
+            background-color: purple;
+        }
+
+        .section{
+            background-color: yellowgreen;
+        }
+        
+
+        [class*="aside"]{
+            padding: 8px;
+            float: left;
+            padding: 15px;
+            width: 33.33%;
+            border: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        .aside1{background-color: blue;}
+        .aside2{background-color: green;}
+        .aside3{background-color: orange;}
+        
+        .article{
+            height: 170px;
+        }
+
+        .footer{
+            background-color: brown;
+        }
+
+        .clear{
+	        clear: both;
+        }
+
+
+        /* 2: 600 px 이상: Tablet */
+        @media screen and (min-width: 600px) {
+            .col-m-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+            .col-m-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+            .col-m-3 {width: 25%;}
+            .col-m-4 {width: 33.33%;}
+            .col-m-5 {width: 41.66%;}
+            .col-m-6 {width: 50%;}
+            .col-m-7 {width: 58.33%;}
+            .col-m-8 {width: 66.66%;}
+            .col-m-9 {width: 75%;}
+            .col-m-10 {width: 83.33%;}
+            .col-m-11 {width: 91.66%;}
+            .col-m-12 {width: 100%;}
+            .header{display: block;}
+            .row-m-3 {height: 260px;}
+            .row-m-2{height: 130px;}
+        }
+
+
+        /* 3: 767px 이상: pc */
+
+        @media screen and (min-width: 767px) {
+            .col-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+            .col-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+            .header{display: block;}
+            .row-3{height: 260px;}
+            .row-1{height: 86px;}
+        } 
+
+    </style>
 </head>
 <body>
+    <div class="header col-m-2 col-4"><p>A</p></div>
+    <div class="nav col-m-10 col-8"><p>B</p></div>
+
+    <div class="clear"></div>
+
+    <div class="section col-m-2 col-2 row-m-3 row-3"><p>C</p></div>
+    <div class="article col-m-8 col-6 row-m-3 row-3"><p>D</p></div>
+
+    <div class="aside1 col-m-2 col-4 row-m-2 row-1"><p>E</p></div>
+    <div class="aside2 col-m-2 col-4 row-m-2 row-1"><p>F</p></div>
+    <div class="aside3 col-m-3 col-4 row-1"><p>G</p></div>
+   
+    <div class="footer col-m-9 col-12"><p>H</p></div>
     
 </body>
 </html>
