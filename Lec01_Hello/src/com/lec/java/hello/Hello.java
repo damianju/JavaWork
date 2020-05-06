@@ -11,7 +11,7 @@ public class Hello {
 		System.out.println("Hello Java!!"); // 한 줄 주석: line comment
 		System.out.println("안녕하세요"); // println()은 화면 출력하고 줄 바꿈.
 		
-		System.out.println();
+		System.out.println(); 
 		
 		System.out.println(1+2);
 		System.out.println("1"+"2");
