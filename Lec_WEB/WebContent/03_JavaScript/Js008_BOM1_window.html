@@ -44,8 +44,29 @@ window
 -->
 
 <script>
+// 전역변수 x, window 소속
+var x = 10;
 
-// TODO
+function myFunc1() {
+	//document.getElementById("result1").innerHTML = "전역 x "+ x;
+	window.document.getElementById("result1").innerHTML = "전역 x "+ window.x;//+", 전역 a"+a;
+}
+
+function myFunc2(){
+	x = x+3;
+	document.getElementById("result2").innerHTML = x;
+}
+
+function myFunc3(){
+	a = 40; // 함수 안에서 선언했단고 다 지역변수 아님. var 사용하지 않으면 자동으로 전역변수(window)
+	document.getElementById("result3").innerHTML = a;
+}
+
+function myFunc4(){
+	a += 20;
+	document.getElementById("result4").innerHTML = a;
+}
+// 함수 안에서 지역변수로 사용할 거라면 꼭!! var 사용
 
 </script>
 
@@ -65,7 +86,15 @@ window
 <script>
 //alert(), confirm(), prompt() 도 window 소속
 
-// TODO
+function myFunc5(){
+	var answer = window.confirm('confirm() 도 window 소속');
+	document.getElementById('result5').innerHTML = answer;
+}
+
+function myFunc6(){
+	var name = window.prompt('너의 이름은?');
+	document.getElementById('result6').innerHTML =name;
+}
 
 </script>
 <input type="button" onclick="window.alert('alert함수도 window 소속')" value='alert() 함수'/><br><br>
@@ -85,13 +114,13 @@ window
 function myFunc7(){
 	// open(url, 새창이름, 새창옵션);
 	// 리턴값도 window 객체
-	// TODO
+	myWindow= open('Js008_BOM1_pop.html', '팝업창', 'width=350','height=400', 'left = 50', 'top=10');
 	
 }
 </script>
 <button type="button" onclick="myFunc7()">open()</button>
 <br><br>
-<button type="button" onclick="TODO">close()</button> <!-- 열린 창 닫기 -->
+<button type="button" onclick="myWindow.close()">close()</button> <!-- 열린 창 닫기 -->
 <br><br>
 <hr>
 

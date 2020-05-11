@@ -22,11 +22,11 @@ window.event 객세 사용
 -->
 <body>
 <ul>
-  <li onclick="/*TODO*/">Coffee</li>
-  <li onclick="/*TODO*/">Tea
+  <li onclick="show(this)">Coffee</li>
+  <li onclick="show(this)">Tea
     <ul>
-      <li onclick="/*TODO*/">Black tea</li>
-      <li onclick="/*TODO*/">Green tea</li>
+      <li onclick="event.stopPropagation(); show(this)">Black tea</li>
+      <li onclick="show(this)">Green tea</li>
     </ul>
   </li>
   <li>Milk</li>
@@ -34,7 +34,10 @@ window.event 객세 사용
 
 <script>
 
-// TODO
+function show(e){
+  // text만 보이기
+  alert(e.childNodes[0].nodeValue);
+}
 
 </script>
 
@@ -52,7 +55,20 @@ window.event 객세 사용
 
 <script>
 
-// TODO
+// 위 <li> 클릭하면 show(this) 가 작동하되도록 이벤트 추가하기
+
+var li = document.querySelectorAll("ul#ad li");
+
+ for(i=0; i< li.length; i++){
+//   li[i].addEventListener("click",function(){ // bubling 방식
+//     show(this)
+//   });
+
+  li[i].addEventListener("click",function(){ // bubling 방식
+    show(this)
+  },true);   
+}
+
 
 </script>
 
