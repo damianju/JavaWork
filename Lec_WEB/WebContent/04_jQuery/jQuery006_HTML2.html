@@ -21,68 +21,74 @@
 */
 $(document).ready(function(){
     $("#btn11").click(function(){
-        // TODO
+        $("p").append("<b>Appended text</b>")
     });
 
     $("#btn12").click(function(){
-        // TODO
+        $("ol").append("<li>Appended item</li>");
     });
  	
     // append, prepend 등에 여러개 매개변수 가능
     $("#btn13").click(function(){
-    	// TODO        // 1. HTML 텍스트 로 작성
+    	var txt1 = "<b>I </b>"       // 1. HTML 텍스트 로 작성
 		
-		// TODO  		// 2. JS DOM 으로 작성
-		
-		// TODO  		// 3. jQuery 로 작성
-		
-		// TODO
+		  var txt2 = "<b>love </b>" 		// 2. JS DOM 으로 작성
+      txt2 = document.createElement('b'); // <b> element 만들기
+      txt2.innerHTML = "love";
+
+		  var txt3 = "<i>jQuery</i>"  		// 3. jQuery 로 작성
+      txt3 = $("<i></i>").text("jQuery") // <i> element 만들기
+
+		$("p").append(txt1, txt2, txt3)
     });
 
     
     $("#btn21").click(function(){
-    	// TODO
+    	$("p").prepend("<b>Prepended text</b>")
     });
     
  	// TODO
 	// #btn22 를 클릭하면 <ol> 의 아이템<li>를 '앞에' 추가
     $("#btn22").click(function(){
-    	// TODO
+    	
     });
     
     //--------------------------------------------
     // after() & before()
     $("#btn31").click(function(){
-    	// TODO
+    	$('img').before("<b>Before</b>")
     });
     $("#btn32").click(function(){
-    	// TODO
+    	$("img").after("<b>after</b>")
     });
 	// #btn33 버튼 클릭하면
 	// I Love jQuery 가 <img> 뒤에 생성시키기
 	// after() 
 
     $("#btn33").click(function(){
-    	// TODO        // 1. HTML 텍스트 로 작성
+      var txt1 = "<b>I </b>"       // 1. HTML 텍스트 로 작성
 		
-		// TODO  		// 2. JS DOM 으로 작성
-		
-		// TODO  		// 3. jQuery 로 작성
-		
-		// TODO
+      var txt2 = "<b>love </b>" 		// 2. JS DOM 으로 작성
+      txt2 = document.createElement('b'); // <b> element 만들기
+      txt2.innerHTML = "love";
+
+      var txt3 = "<i>jQuery</i>"  		// 3. jQuery 로 작성
+      txt3 = $("<i></i>").text("jQuery") // <i> element 만들기
+
+      $("img").after(txt1, txt2, txt3)
     }); 
     
     //--------------------------------------------------
     // remove() :  element 삭제
     // empty() : element 의 child element 들 삭제
     $("#btn41").click(function(){
-        // TODO
+        $("p").remove();
     });
     $("#btn42").click(function(){
-    	// TODO
+    	$("ol").empty();
     });
     $("#btn43").click(function(){
-    	// TODO  // remove() 의 매개변수로 jQuery selector 를 넣을수 있다
+    	$("p").remove("#test"); // remove()의 매개변수만 지우기
     });
 });
 

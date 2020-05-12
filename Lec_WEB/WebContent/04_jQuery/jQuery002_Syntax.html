@@ -12,6 +12,7 @@ HTML element 선택 +  그 element 에 동작(action) 수행
 
 	기본구문:
 	
+	CSS selector 사용
 	$(selector).action()
 	
 		$ : jQuery 에 접근하기 위한 함수
@@ -30,21 +31,31 @@ HTML element 선택 +  그 element 에 동작(action) 수행
 //	다음 코드로 시작함
 //$(document).ready(함수);
 
-// TODO
+$(document).ready(function(){
+	alert('ready 함수()')
+});
+
 
 //'document' 즉, 웹문서의 로딩이 '완료'되면
 //ready() 의 매개변수로 주어진 함수를 수행
 
-// TODO
+$(document).ready(function(){
+	alert('명훈아')
+});
 
 
 // 축약된 형태도 많이 사용
 //$(함수);
 
-// TODO
+$(function(){
+	alert('ready() 함수2');
+});
 
-
-// TODO
+$(document).ready(function(){
+	$("button").click(function(){
+		$("P").hide();
+	})
+})
 
 </script>
  

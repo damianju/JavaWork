@@ -32,53 +32,61 @@ css(property, value) - css 값 변경
 $(document).ready(function(){
 	// 1. Get
     $("#btn11").click(function(){
-        alert("text(): " /* TODO */);
+        alert("text(): " + $("#test1").text());
     });
     $("#btn12").click(function(){
-        alert("html(): " /* TODO */);
+        alert("html(): " + $("#test1").html());
     });
     $("#btn13").click(function(){
-        alert("val(): " /* TODO */);
+        alert("val(): " + $("#test2").val());
     });
     $("#btn14").click(function(){
-        alert("attr():" /* TODO */);
+        alert("attr():" + $("#test3").attr("href"));
     });
     $("#btn15").click(function(){
-        alert("css():" /* TODO */);
+        //alert("css():" + $("#test1").css("color"));
 
-        // TODO
+        //alert("css():" + $("#test1").css("color")+" "+ $("#test1").css("backgroundColor"));
+
         
         // 한꺼번에 여러가지 css 값을 읽어 올수도 있다
         
-        // TODO
+        var cssObj = $("#test1").css(["color", "backgroundColor"]);
+        alert("css(): "+cssObj.color +" "+cssObj.backgroundColor)
     });
 
     // 2. Set
     // 매개변수를 주면 값을 변경할수 있다.
     $("#btn21").click(function(){
-        // TODO
+        $("#test1").text("test1: Hello <b>World</b>")
     });
     $("#btn22").click(function(){
-        // TODO
+        $("#test1").html("test1: Hello <b>World</b>")
     });
     $("#btn23").click(function(){
-        // TODO
+        $("#test2").val("Donald Trump")
     });
 
     $("#btn24").click(function(){
-        // TODO
+        $("#test3").attr("href", "https://www.jQuery.com")
         
         // 한꺼번에 여러 attribute 변경 가능
         // href 와 title 변경하기
-        // TODO
+        $("#test3").attr({
+            href: "http://www.daum.net",
+            title: "다음"
+        });
     });
     $("#btn25").click(function(){
     	
-    	// TODO
+    	$("#test1").css("color", 'red');
     	
     	// 한꺼번에 여러 CSS 변경 가능
     	// 글자색 --> white ,   배경색 -->  gray
-    	// TODO
+    	$("#test1").css({
+            color: "white",
+            backgroundColor: "gray"
+        })
     });
     
     
@@ -89,16 +97,36 @@ $(document).ready(function(){
     // 결국 callback 함수의 리턴값이 새로운 값으로 된다.
    
     $("#btn31").click(function(){
-    	// TODO
+    	var result = "";
+        // result += $(".c1").text(); // 전부다 추출됨
+        // alert(result);
+        
+        // text(함수)<-- 이 함수는 select 된 각 element에 대해 동작함
+        // i: index, oldValue: 값
+        // $(".c1").text(function(i, oldvalue){
+        //     result += i + ": " + oldvalue + "\n";
+        // });
+        //     alert(result);
+
+        // callback 함수에 return 값이 있으면 '변경' 발생
+        $(".c1").text(function(i, oldValue){
+            return oldValue+ "("+i+")";
+        });
     });
     $("#btn32").click(function(){
-		// TODO
+		$(".c1").html(function(i, oldValue){
+            return oldValue +"<b>("+i+")</b>";
+        })
     });
     $("#btn33").click(function(){
-		// TODO
+		$(".i1").val(function(i, oldValue){
+            return oldValue+"("+i+")";
+        });
     });
     $("#btn34").click(function(){
-		// TODO
+		$(".c1").attr("title", function(i, oldValue){
+            return oldValue + "("+i+")";
+        })
     });
     
 });

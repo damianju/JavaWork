@@ -35,7 +35,18 @@
 
 <script>
 
-// TODO
+$("#run").click(function(){
+  // :animated 라는 selector는
+  // 현재 animation 중인 element에 적용
+  $("div:animated").toggleClass("colored"); // 색 없으면 넣고 있으면 빼고
+});
+
+function animateIt(){
+  $("#mover").slideToggle("slow", animateIt); // 2번째 매개변수: 애니메이션 끝나면 수행하는 함수
+  // 재귀호출 아님
+}
+
+animateIt();
 
 </script>
 

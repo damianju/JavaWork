@@ -25,6 +25,9 @@
  	URL:  request 할 url
  	data :  쿼리스트링에 해당하는 데이터  (key-value 쌍으로 이루어짐)
  	callback : load() 완료후 수행할 함수
+
+
+
  */ 
  
 $(document).ready(function(){
@@ -34,13 +37,13 @@ $(document).ready(function(){
 		// 예제를 위해서 서버에서 돌려야 한다  ( request 이기 때문)
 	    $("#btn01").click(function(){
 	    	
-	    	// TODO
+	    	$("#div1").load(url);
 	    	
 	    });
 		
 		// jQuery selector 를 붙이는 것도 가능!
 	    $("#btn02").click(function(){
-	    	// TODO        // "https://www.w3schools.com/jquery/demo_test.txt #p1"
+	    	$("#div1").load(url+ " #p1");        // "https://www.w3schools.com/jquery/demo_test.txt #p1"
 	    });
 		
 		// callback 함수는 3개의 parameter 받는다

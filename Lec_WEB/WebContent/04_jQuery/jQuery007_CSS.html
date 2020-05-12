@@ -29,15 +29,20 @@ jQuery 는 이를 간단히 구현하는 함수들 제공
 
 $(document).ready(function(){
     $("#btn01").click(function(){
-        // TODO
+        $("h1, h2, p").addClass("blue");
+        $("div#d01").addClass("important");
+
+        // 동시에 복수개 클래스 추가 가능
+        $("div#d02").addClass("imporatant blue");
     });
     
     $("#btn02").click(function(){
-    	// TODO
+    	$("h1, h2, p").removeClass("blue");
     });
     
     $("#btn03").click(function(){
-        // TODO
+        $("h1, h2, p").removeClass("blue");
+        $("div#d01").toggleClass("important");
     });
 });
 </script>
