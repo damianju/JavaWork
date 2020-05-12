@@ -22,7 +22,7 @@ th,td {
 
 			GET 방식 / POST 방식 둘다 지원함
 	
-	var api_key = "devU01TX0FVVEgyMDE5MTIwMzIzNDY0NzEwOTI3NTE=";
+	var api_key = "devU01TX0FVVEgyMDIwMDUxMjE2NTIwODEwOTc1MDE=";
 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
@@ -56,7 +56,22 @@ function getAddr(){
 	$.ajax({
 		url :"http://www.juso.go.kr/addrlink/addrLinkApiJsonp.do"  //인터넷망
 		
-		// TODO
+		, type: "post"
+		, data: {  // post request 에 필요한 parameter 
+			currentPage: $("#form").find('[name="currentPage"]').val()
+			, countPerPage: $("#form").find('[name="countPerPage"]').val()
+			, confmKey: $("#form").find('[name="confmkey"]').val()
+			, keyword:  $("#form").find('[name="keyword"]').val()
+		} 
+		, dataType: "jsonp" 
+		, crossDomain: true // cross-domain  문제(JSON with Padding)
+
+		, success: function(xmlStr){
+
+			$("#list").html("");
+			makeList(xmlStr.returnXml);
+
+		}
 		
 	});
 }

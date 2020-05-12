@@ -19,8 +19,8 @@ th,td {
 <form>
 날짜 (yyyyMMdd): <input type="text" name="date" id="date" value="20181001"/><br><br>
 
-<button id="btn_load" type="button"">승하차정보 가져오기</button>
-<button id="btn_remove" type="button"">지우기</button>
+<button id="btn_load" type="button">승하차정보 가져오기</button>
+<button id="btn_remove" type="button">지우기</button>
 </form>
 <br><br>
 <h2>AJAX + XML</h2>
@@ -80,7 +80,7 @@ dataFilter(data,type) :
 	
 */
 
-var api_key = "보여다오 당신의 키값을!";
+var api_key = "554272615264616d3132394273656947";
  
  $(document).ready(function(){
 	 $("#btn_load").click(function(){
@@ -89,14 +89,28 @@ var api_key = "보여다오 당신의 키값을!";
 		 // XML
 		 var url = "http://openapi.seoul.go.kr:8088/" + api_key + "/xml/CardSubwayStatsNew/1/5/" + date;
 		
-		// TODO
+		$.ajax({
+			url: url
+			, type: "GET"
+			, cache: false
+			, success: function(data, status){
+				if(status == "success") parseXML(data);
+			}
+		});
 		 
 		 
 		 
 		// JSON
 		url = "http://openapi.seoul.go.kr:8088/" + api_key + "/json/CardSubwayStatsNew/1/5/" + date;
 		 
-		// TODO
+		$.ajax({
+			url: url
+			, type: "GET"
+			, cache: false
+			, success: function(data, status){
+				if(status == "success") parseJSON(data);
+			}
+		})
 		
 	 });
 	 
