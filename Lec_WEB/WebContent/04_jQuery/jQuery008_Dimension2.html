@@ -25,10 +25,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
-// TODO
+$(document).ready(function(){
+	// 클릭시 좌표 알아내기
+	$(document).click(function(event){
+		// 화면에 클릭한 좌표
+		// alert(event.pageX + " " + event.pageY); // 좌표 확인용
+		var txt = event.pageX+" "+event.pageY;
+		$("#div1").css({
+			"left": event.pageX
+			, "top" : event.pageY
+		});
+		//$("#div1").text(txt);
+
+		// 클릭한 곳에 동그라미 나타났다 사라지게 하기
+		// 클릭한 곳의 중앙에 원이 생기도록 위치 조정
+		$("#circle").css({
+			"left" : event.pageX - ($("#circle").outerWidth(true)/2)
+			, "top" : event.pageY - ($("#circle").outerHeight(true)/2)
+		});
+		//$("#circle").fadeIn(2000).fadeOut(2000);
+
+		$("#circle").stop(true).fadeIn(100, function(){
+			$("#circle").fadeOut(500);
+		});
+	});
+});
 
 </script>
 <body>
+<div>화면을 클릭해보세요</div>
 <div id="div1"></div>
 <div id="circle"></div>
 </body>

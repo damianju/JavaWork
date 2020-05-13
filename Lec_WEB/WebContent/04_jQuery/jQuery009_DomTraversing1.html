@@ -58,91 +58,100 @@ $(document).ready(function(){
 
 	// 어떤 버튼이든지 눌리면 selected 클래스 제거
 	$("button").click(function(){
-		// TODO  
+		$("*").removeClass("selected");
 	});
 	
 	//---------------------------------------------
 	// parent()
 	$("#btn11").click(function(){
-		// TODO  
+		$("span").parent().addClass("selected")
 	});
 	
 	// parents()
 	$("#btn12").click(function(){
-		// TODO  
+		$("span").parents().addClass("selected")
 	});
 	
 	// parents("ul")
 	$("#btn13").click(function(){
-		// TODO  
+		// "span"의 조상 중에서 "ul"만 선택됨.
+		$("span").parents("ul").addClass("selected") 
 	});
 	
 	// parentesUntil()
 	$("#btn14").click(function(){
-		// TODO  
+		// "span" 상위 element들 중 "div"전 까지만 선택됨.
+		$("span").parentsUntil("div").addClass("selected") 
 	});
 	
 	//-----------------------------------------
 	//
 	// children
 	$("#btn21").click(function(){
-		// TODO  
+		$("div").children().addClass("selected")
 	});
 	
 	// children("..")
 	$("#btn22").click(function(){
-		// TODO  
+		$("div").children("p").addClass('selected');
 	});
 	
 	// find()
 	$("#btn23").click(function(){
-		// TODO  
+		$("div").find("span").addClass("selected");
 	});
 	
 	// find(*)
 	$("#btn24").click(function(){
-		// TODO  
+		$("div").find("*").addClass("selected")
 	});
 	
 	//-----------------------------------------
 	// siblings()
+	// h2 형제들 모두 찾음
 	$("#btn31").click(function(){
-		// TODO  
+		$("#sibling h2").siblings().addClass("selected");
 	});
-
+	// h2 형제들 중 p만 찾음
 	$("#btn32").click(function(){
-		// TODO  
+		$("#sibling h2").siblings("p").addClass("selected");
 	});
 
 	// next()
+	// 다음 형제
 	$("#btn33").click(function(){
-		// TODO  
+		$("#sibling h2").next().addClass("selected");  
 	});
 	
 	// nextAll()
+	// 다음 형제 모두
 	$("#btn34").click(function(){
-		// TODO  
+		$("#sibling h2").nextAll().addClass("selected");
 	});
 	
 	// nextUntil(..)
+	// 다음 형제부터 매개변수 전까지
 	$("#btn35").click(function(){
-		// TODO  
+		$("#sibling h2").nextUntil("h6").addClass("selected"); 
 	});
 	
 	// TODO.. 나머지는 직접 해보자
 	// prev()
+	// 바로 전 형제
 	$("#btn36").click(function(){
-		// TODO  
+		$("#sibling h5").prev().addClass("selected") ;
 	});
 	
 	// prevAll()
+	// 전 형제 모두
 	$("#btn37").click(function(){
-		// TODO  
+		$("#sibling h5").prevAll().addClass("selected") ;  
 	});
 	
 	// prevUntil()
+	// 전 형제부터 매개변수까지
 	$("#btn38").click(function(){
-		// TODO  
+		$("#sibling h5").prevUntil("h2").addClass("selected") ; 
 	});
 	
 });
@@ -166,7 +175,7 @@ $(document).ready(function(){
       </p> 
   </div>
   
-	<div id="sibling">div (parent)
+	<div id="sibling">div (parent) #sibling
 		<p>p</p>
 		<span>span</span>
 		<h2>h2</h2>
