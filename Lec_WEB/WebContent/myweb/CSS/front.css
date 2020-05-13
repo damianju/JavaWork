@@ -14,6 +14,7 @@
     text-align: center;
 }
 
+
 .conB .container{
     padding-top: 80px;
     padding-bottom: 20px;
@@ -40,11 +41,12 @@
     opacity: 0.8;
 }
 
-.conB a {
+.conB .more {
     color: #5D9AB2;
-    color: var(--main-color);
     text-decoration:none;
 }
+
+
 .conB .icon {
     display: inline-block;
     margin-bottom: 20px;
@@ -54,6 +56,7 @@
     border-radius: 50%;
     text-align: center;
     background-color: #ddd;
+    
     /*background-color: var(--icon-bk-color);
     color: #fff;
     color: var(--icon-color);*/

@@ -5,35 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEX</title>
-    <link href ="CSS/defualt.css" rel="stylesheet" type="text/css">
+    <link href ="CSS/common.css" rel="stylesheet" type="text/css">
+    <link href ="CSS/front.css" rel="stylesheet" type="text/css">
+    
 </head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <body>
     <div id="wrapper">
-        <header id="header">header
-            <h1>
-                <a href="#">
-                    <img src="#" alt="TBD">
-                </a>
-            </h1>
-            <nav id = "top_menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">BUSINESS</a></li>
-                    <li><a href="#">IMAGE</a></li>
-                    <li><a href="#">INFO</a></li>
-                </ul>
-            </nav>
-            <div class="login">
-                <div class="link">
-                    <a href="#">login</a>
-                    <a href="#">join</a>
-                    <a href="#">search</a>
+        <header id="header">
+            <div id="header_top">
+                <div id ="login">
+                    <div class="link">
+                        <a href="#">로그인</a>
+                        <span>|</span>
+                        <a href="#">회원가입</a>
+                        <span>|</span>
+                        <a href="#">검색</a>
+                    </div>
                 </div>
             </div>
+            
+            <hr>
+            <div class="clear"></div>
+            
+            <div id="header_bottom">
+                <h1 id="logo" >
+                    <a href="http://127.0.0.1:5500/myweb/index.html#">
+                        <img src="https://seeklogo.com/images/H/hecho-en-mexico-logo-629EA3F7C3-seeklogo.com.png" alt="MEX 로고">
+                    </a>
+                </h1>
+
+                <div class="clear"></div>
+                
+                <nav id = "main_menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">BUSINESS</a></li>
+                        <li><a href="#">IMAGE</a></li>
+                        <li><a href="#">INFO</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
+        
         <div id="mheader"></div>
+
         <div class="clear"></div>
+
         <div id="sub_img_member"></div>
+
         <div class="clear"></div>
 
         <aside id="sub_menu">
@@ -85,75 +106,74 @@
                 </form>
             </article>
         </section>
-        <div class="clear"></div>
        
-        <footer>footer
-            <div id="footer_top"></div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="#">개인정보</a>
-                        </li>
-                        <li>
-                            <a href="#">사이트맵</a>
-                        </li>
-                        <li>
-                            <a href="#">이용약관</a>
-                        </li>
-                        <li>
-                            <a href="#">법적고지</a>
-                        </li>
+        <div class="clear"></div>
 
-                    </ul>
+        <footer id="footer">
+            <div class="container">
+                <div class="top">
+                    <div class="links">
+                        <a class="info" href="#">개인정보</a>
+                        <span class="info">|</span>
+                        <a class="info" href="#">사이트맵</a>
+                        <span class="info">|</span>
+                        <a class="info" href="#">이용약관</a>
+                        <span class="info">|</span>
+                        <a class="info" href="#">법적고지</a>
+                    </div>
                 </div>
-            <div id="footer_bottom">
-                <div class="footer-logo">
-                    <img src="#">
-                </div>
-                <div class="site">
-                    <ul class="social">
-                        <li class="facebook">
-                            <a href="#">
-                                <span>facebook</span>
-                            </a>
-                        </li>
-                        <li class="youtube">
-                            <a href="#">
-                                <span>youtube</span>
-                            </a>
-                        </li>
-                        <li class="twitter">
-                            <a href="#">
-                                <span>twitter</span>
-                            </a>
-                        </li>
-                        <li class="instagram">
-                            <a href="#">
-                                <span>instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="family-stie">
-                        <div class="selectbox">
-                            <button type="button">
-                                <span>Family Site</span>
-                            </button>
-                            <ul class="site-list">
-                                <li>
-                                    <a href="#">멕시코대사관</a>
-                                </li>
-                                <li>
-                                    <a href="#">멕시코문화뭔</a>
-                                </li>
-                                <li>
-                                    <a href="#">외교부</a>
-                                </li>
-                            </ul>
+                
+                <div class="clear"></div>
+
+                <div class="bottom">
+                    <div class="footer-logo">
+                        <img src="https://seeklogo.com/images/H/hecho-en-mexico-logo-629EA3F7C3-seeklogo.com.png" alt="MEX 로고">
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <p id="copyright">
+                        Copyright 2020 MEX all rights reserved. 
+                    </p>
+
+                    <div class="clear"></div>
+                    <div class="site">
+                        <ul class="social">
+                            <li class="facebook">
+                                <a href="#">
+                                    <span>
+                                        <i class="fab fa-facebook-square icon"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#">
+                                    <span>
+                                        <i class="fab fa-youtube icon"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="#">
+                                    <span>
+                                        <i class="fab fa-twitter-square icon"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#">
+                                    <span>
+                                        <i class="fab fa-instagram icon"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>    
+        </footer>
     </div>
 </body>
 </html>
