@@ -15,7 +15,7 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close">&times;</span> <!-- x 표시 -->
     <p>팝업창의 내용입니다. 어쩌구 저쩌구</p>
   </div>
 
@@ -23,7 +23,26 @@
 
 <script>
 
-// TODO
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+// 버튼 클릭하면 팝업 보이게 하기
+btn.onclick = function(){
+  modal.style.display = "block";
+}
+// 팝업의 X 버튼 누르면 닫히게 하기
+span.onclick = function(){
+  modal.style.display = "none";
+}
+
+// 팝업 창 바깥을 클릭해도 팝업이 닫히게 하기 (modal) <--> (반대: modeless)
+window.onclick = function(){
+  // event.target : event 발생한 element 객체
+  if(event.target == modal){
+      modal.style.display = 'none';
+  }
+}
 
 </script>
 

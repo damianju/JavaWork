@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+
+
+
+.main { 
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    width: 971px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*#sub_img{
+    width: 971px;
+    height: 200px;
+    background-image: url(../images/main_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#sub_img img {
+    margin: 9px 0 0 0;
+}*/
+
+.sidenav{
+    height: 100%;
+    width: 160px;
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.conA {
+    
+    margin-left: 160px;
+    padding: 0px 50px;
+}
+
+.conA .container h1{
+    margin-top: 0;
+}
+
+.conA .container form {
+    margin: 10px 0 0 0;
+}
+
+.conA .container form fieldset {
+    padding: 10px 0 20px 5px;
+    border: none;
+}
+
+.conA .container form legend {
+    font-family: seo;
+    font-size: 20px;
+    border-bottom: 1px dotted #666;
+    width: 600px;
+    padding: 5px 0;
+}
+
+.conA .container form label {
+    width: 140px;
+    float: 
+   
+}
