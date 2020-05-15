@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+*{box-sizing: border-box;}
+
+@media screen and (min-width: 767px) {
+    header#header {display: block;}
+    header#mheader {display: none;}
+  }
