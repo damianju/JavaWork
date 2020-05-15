@@ -9,11 +9,12 @@ body{
 }
 
 #header {
+    display: none;
     position: relative; 
     top:0; 
     left:0; 
     width: 100%; 
-    height: 160px; 
+    height: 120px; 
     background-color: gray; 
     z-index: 3; 
     overflow: hidden;
@@ -24,12 +25,22 @@ body{
 
 #header .top {
     position: relative; 
-    margin: 10px 80px 35px 30px; 
+    margin: 5px 80px 35px 30px; 
 }
 
-#login {position: absolute; top:0; right: 0;  background-color: tomato; }
-#login .link {float: right;}
-#login .link a, #login .link span {float: left; position: relative; display: flex; margin-left: 14px; padding-left: 14px; font-weight: 300; font-size: 15px; color: white; text-decoration: none;}
+#header #login {position: absolute; top:0; right: 0;  background-color: tomato; }
+#header #login .link {float: right;}
+#header #login .link a, #header #login .link span {
+    float: left; 
+    position: relative; 
+    display: flex; 
+    margin-left: 14px; 
+    padding-left: 14px; 
+    font-weight: 300; 
+    font-size: 15px; 
+    color: white; 
+    text-decoration: none;
+}
 
 
 #header .bottom {
@@ -40,17 +51,85 @@ body{
     border-top: 1px solid #dcdcdc;
 }
 
-#logo {float: left; width: 80px; margin: 20px 0 0 60px;}
-#header img {background: none; border: none; width: 80px; height: 70px; background-color: tomato; }
+
+#header #logo {float: left; position: absolute; width: 80px; margin: 20px 0 0 60px;}
+#header img {background: none; border: none; width: 60px; height: 40px; background-color: tomato; }
+
 
 #header .bottom .menu {
     position: relative;
-    margin-top: 40px;
+    margin-top: 25px;
+    left: auto;
     padding:0; 
     text-align: center;
     background-color: tomato;
 }
+
 #header .bottom .menu a {
+    margin-left: 30;
+    margin-right: 30px; 
+    font-size: 20px; 
+    color: white; 
+    text-decoration: none; 
+    
+}
+
+#mheader {
+    position: relative; 
+    top:0; 
+    left:0; 
+    width: 100%; 
+    height: 50px; 
+    background-color: gray; 
+    z-index: 3; 
+    overflow: hidden;
+}
+
+#mheader .container {
+    padding: 10px 0px; display: block; margin: auto; }
+
+#mheader .top {
+    position: relative; 
+    margin: 5px 80px 35px 30px; 
+}
+
+#mheader  #login {position: absolute; top:0; right: 0;  background-color: tomato; }
+#mheader  #login .link {float: right;}
+#mheader  #login .link a, #mheader  #login .link span {
+    float: left; 
+    position: relative; 
+    display: flex; 
+    margin-left: 14px; 
+    padding-left: 14px; 
+    font-weight: 300; 
+    font-size: 15px; 
+    color: white; 
+    text-decoration: none;
+}
+
+#mheader .bottom {
+    position: relative; 
+    display: block;
+    margin: auto;
+    padding:0; 
+    border-top: 1px solid #dcdcdc;
+}
+
+
+#mheader #logo {float: left; position: absolute; width: 80px; margin: 20px 0 0 60px;}
+#mheader img {background: none; border: none; width: 60px; height: 40px; background-color: tomato; }
+
+
+#mheader .bottom .menu {
+    position: relative;
+    margin-top: 25px;
+    left: auto;
+    padding:0; 
+    text-align: center;
+    background-color: tomato;
+}
+
+#mheader .bottom .menu a {
     margin-left: 30;
     margin-right: 30px; 
     font-size: 20px; 
@@ -69,6 +148,7 @@ body{
     left:0;
     width: 100%; 
     overflow: hidden;
+    
 }
 
 #footer .container {padding: 40px 0px; display: block; margin: auto;}
@@ -98,19 +178,21 @@ body{
     padding:20px 0px 52px 0px; 
     border-top: 1px solid #dcdcdc;
     text-align: center; 
+    width: 100%;
 }
 
 #footer .bottom #copyright{ 
     position: relative; 
-    font-size: 15px;  
+    font-size: 15px;
     padding: 0;
-    margin: 0;
-
+    left: auto;
     background-color: tomato; 
 }
-.footer-logo {float: left; width: 80px; margin: 0 0 0 60px; background-color: tomato}
-.footer-logo img {background: none; border: none; width: 80px; height: 70px;}
-#footer .bottom .site {float: right;  margin:0 60px 0 0; background-color: tomato;}
-#footer .bottom .social {display: flex; list-style: none; margin: 0 7px; padding: 0; background-color: cyan;}
-#footer .bottom .social a {display: block; margin-right: 30px; padding: 0; font-size: 30px; text-decoration: none; line-height: 2em; text-align: center;}
 
+.footer-logo {float: left; position: absolute; width: 80px; margin: 0 0 0 60px; background-color: tomato}
+.footer-logo img {background: none; border: none; width: 80px; height: 70px;}
+
+
+#footer .bottom .site {float: right; position: absolute; left: 80%; top: 10%; background-color: tomato; margin: 0;}
+#footer .bottom .social {display: flex; list-style: none; margin: 0; padding: 0; background-color: cyan;}
+#footer .bottom .social a  {display: block; margin-right: 30px; padding: 0;  font-size: 30px; text-decoration: none; line-height: 2em; text-align: center;}

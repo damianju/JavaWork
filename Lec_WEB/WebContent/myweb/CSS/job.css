@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+.conA {
+    
+    margin-left: 160px;
+    padding: 0px 50px;
+}
+
+.conA .container h1{
+    margin-top: 0;
+}
+
+.conA .container table#job {
+    width: 670px;
+    border-collapse: collapse;
+    margin: 20px 0 0 0;
+}
+
+.conA .container table#job th{
+    height: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    background-color: blue;
+}
+
+.conA .container table#job th.tno {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 50px;
+}
+
+.conA .container table#job th.title {
+    width: 400px;
+    letter-spacing: 0.7em;
+}
+
+.conA .container table#job th.twrite {
+    width: 100px;
+}
+
+.conA .container table#job th.tdate {
+    width: 50px;
+}
+
+.conA .container table#job th.tread {
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	width:50px;
+}
+
+
+.conA .container table#job table#notice td {
+	text-align:center;
+	padding:6px 0;	
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+}
+
+
+.conA .container table#job table#notice td.left {
+	text-align:left;
+}
+
+.conA .container table#job table#notice tr:hover {
+	background-color: #EEFDFF;
+	cursor: pointer; 
+	cursor:hand;
+}
+
+
+
+.conA .container table#job #table_search {
+	margin:15px 0 10px 0;
+	float:right;
+}
+
+#table_search .input_box {
+	height:20px;
+	width:200px;
+	padding:0 10px; 
+	border: 1px solid  #333 ; 
+	border-radius:10px;	
+	background-color: #FEFDED;
+
+}
+
+#table_search .btn {
+	padding:2px;
+	margin:0 0 0 5px;
+	width:90px;
+	height:23px;
+	border:1px solid #999;
+	border-radius:10px;
+	color: #FFF;
+	background-image: url(../images/center/t_back.jpg);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
+
+#page_control {
+	text-align:center;
+	margin:20px 0 0 0;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+#page_control a {
+	padding:2px 5px;
+	text-decoration: none;
+	color: #333;
+	margin:0 5px;
+
+} 
+
+#page_control a:hover {
+	font-weight: bold;
+	color: #F90;
+	text-decoration: underline;
+}

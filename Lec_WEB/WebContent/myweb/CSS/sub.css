@@ -1,33 +1,72 @@
 @charset "UTF-8";
 
-
-
-
 .main { 
     background-color: lightblue;
     margin: 0;
-    padding: 0;
+    padding: 80px 0px;
     position: relative;
     height: 100%;
     width: 100%;
-    width: 971px;
+    width: 1250px;
     text-align: left;
     margin-right: auto;
     margin-left: auto;
 }
 
-/*#sub_img{
-    width: 971px;
+div.bc {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: tomato;
+    z-index: 10;
+}
+
+ul.breadcrumb{
+    height: 50%;
+    padding: 10px 30px;
+    background-color: blue;
+}
+
+ul.breadcrumb li{
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">\00a0";
+}
+
+ul.breadcrumb li a{
+    color: white;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*
+.sub_img{
+    position: absolute;
+    top: 0;
+    width: 1250px;
+    background-color: tomato;
+    z-index: 9;
     height: 200px;
     background-image: url(../images/main_img.jpg);
     background-repeat: no-repeat;
     background-position: center top;
 }
 
-#sub_img img {
+.sub_img img {
     margin: 9px 0 0 0;
-}*/
+}
 
+*/
 .sidenav{
     height: 100%;
     width: 160px;
@@ -38,13 +77,22 @@
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
+    padding: 60px 0px;
+}
+
+.sidenav h2{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
 }
 
 .sidenav a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 15px;
+    color: white;
     display: block;
 }
 
@@ -52,35 +100,3 @@
     color: #f1f1f1;
 }
 
-.conA {
-    
-    margin-left: 160px;
-    padding: 0px 50px;
-}
-
-.conA .container h1{
-    margin-top: 0;
-}
-
-.conA .container form {
-    margin: 10px 0 0 0;
-}
-
-.conA .container form fieldset {
-    padding: 10px 0 20px 5px;
-    border: none;
-}
-
-.conA .container form legend {
-    font-family: seo;
-    font-size: 20px;
-    border-bottom: 1px dotted #666;
-    width: 600px;
-    padding: 5px 0;
-}
-
-.conA .container form label {
-    width: 140px;
-    float: 
-   
-}
