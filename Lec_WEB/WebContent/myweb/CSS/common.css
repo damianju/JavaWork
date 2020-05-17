@@ -2,10 +2,17 @@
 
 *{box-sizing: border-box;}
 
+[class*="col-"]{
+    float: left;
+    padding: 5px;
+    width: 100%;
+}
+
 body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke
 }
 
 #header {
@@ -15,7 +22,7 @@ body{
     left:0; 
     width: 100%; 
     height: 120px; 
-    background-color: gray; 
+    background-color:white;
     z-index: 3; 
     overflow: hidden;
 }
@@ -28,7 +35,7 @@ body{
     margin: 5px 80px 35px 30px; 
 }
 
-#header #login {position: absolute; top:0; right: 0;  background-color: tomato; }
+#header #login {position: absolute; top:0; right: 0;}
 #header #login .link {float: right;}
 #header #login .link a, #header #login .link span {
     float: left; 
@@ -38,9 +45,10 @@ body{
     padding-left: 14px; 
     font-weight: 300; 
     font-size: 15px; 
-    color: white; 
+    color: black; 
     text-decoration: none;
 }
+
 
 
 #header .bottom {
@@ -52,8 +60,8 @@ body{
 }
 
 
-#header #logo {float: left; position: absolute; width: 80px; margin: 20px 0 0 60px;}
-#header img {background: none; border: none; width: 60px; height: 40px; background-color: tomato; }
+#header #logo {float: left; position: absolute; width: 80px; margin: 10px 0 0 60px;}
+#header img {background: none; border: none; width: 60px; height: 50px;  }
 
 
 #header .bottom .menu {
@@ -62,14 +70,14 @@ body{
     left: auto;
     padding:0; 
     text-align: center;
-    background-color: tomato;
+    
 }
 
 #header .bottom .menu a {
-    margin-left: 30;
+    margin-left: 30px;
     margin-right: 30px; 
     font-size: 20px; 
-    color: white; 
+    color: black; 
     text-decoration: none; 
     
 }
@@ -80,69 +88,73 @@ body{
     left:0; 
     width: 100%; 
     height: 50px; 
-    background-color: gray; 
+    background-color: white; 
     z-index: 3; 
     overflow: hidden;
 }
 
 #mheader .container {
-    padding: 10px 0px; display: block; margin: auto; }
-
-#mheader .top {
-    position: relative; 
-    margin: 5px 80px 35px 30px; 
+    padding: 0px 0px; display: block; margin: 0; 
 }
 
-#mheader  #login {position: absolute; top:0; right: 0;  background-color: tomato; }
-#mheader  #login .link {float: right;}
-#mheader  #login .link a, #mheader  #login .link span {
+
+
+#mheader  #login {
+    position: absolute; 
+    top:0; 
+    right: 0;
+    margin: 12px 20px 0 0;
+    
+}
+#mheader  #login .link {
+    float: right;
+}
+#mheader  #login .link i {
+    margin-left: 10px;
+    margin-right: 10px; 
+    font-size: 25px; 
+    color: black; 
+    text-decoration: none; 
+}
+
+#mheader #logo {
     float: left; 
-    position: relative; 
-    display: flex; 
-    margin-left: 14px; 
-    padding-left: 14px; 
-    font-weight: 300; 
-    font-size: 15px; 
-    color: white; 
-    text-decoration: none;
+    position: absolute;
+    top: 0;
+    width: 80px; 
+    margin: 10px 0 0 30px;}
+
+#mheader img {
+    background: none;
+    border: none; 
+    width: 42px; 
+    height: 32px; 
+     
 }
 
-#mheader .bottom {
-    position: relative; 
-    display: block;
+
+#mheader .menu {
+    position:relative; 
+    display: block;  
     margin: auto;
     padding:0; 
-    border-top: 1px solid #dcdcdc;
-}
-
-
-#mheader #logo {float: left; position: absolute; width: 80px; margin: 20px 0 0 60px;}
-#mheader img {background: none; border: none; width: 60px; height: 40px; background-color: tomato; }
-
-
-#mheader .bottom .menu {
-    position: relative;
-    margin-top: 25px;
-    left: auto;
-    padding:0; 
     text-align: center;
-    background-color: tomato;
+  
 }
 
-#mheader .bottom .menu a {
-    margin-left: 30;
-    margin-right: 30px; 
+#mheader .menu p {
+    margin-left: 30px;
+    margin-right: 30px;  
     font-size: 20px; 
-    color: white; 
+    color: black; 
     text-decoration: none; 
     
 }
 
 
-
 #footer {
     color: #fff; 
-    background-color: gray; 
+    background-color: #2b2b2b;
     position: relative; 
     bottom:0; 
     left:0;
@@ -151,19 +163,19 @@ body{
     
 }
 
-#footer .container {padding: 40px 0px; display: block; margin: auto;}
-
-#footer .top {
-    position:relative; 
-    padding:15px 0 45px 0; 
+#footer .container {
+    
     display: block; 
     margin: auto;
-    background-color: tomato; 
+}
+
+#footer .top {
+    display: block; 
+    margin: auto;
+    
 }
 #footer .top .links {text-align: center; }
-#footer .top .links a, #footer .top .links span {
-    position: relative;  
-    margin-left: 30px; 
+#footer .top .links a {
     font-size: 16px; 
     color: white; 
     text-decoration: none; 
@@ -172,27 +184,110 @@ body{
 
 
 #footer .bottom {
-    position:relative; 
-    display: block;  
-    margin: auto; 
-    padding:20px 0px 52px 0px; 
+    position: relative; 
+    display: block;
+    padding:0;
     border-top: 1px solid #dcdcdc;
-    text-align: center; 
     width: 100%;
 }
 
-#footer .bottom #copyright{ 
-    position: relative; 
-    font-size: 15px;
-    padding: 0;
-    left: auto;
-    background-color: tomato; 
+.footer-logo {
+    display: none;
+
+    height: 85px;
+    
 }
 
-.footer-logo {float: left; position: absolute; width: 80px; margin: 0 0 0 60px; background-color: tomato}
-.footer-logo img {background: none; border: none; width: 80px; height: 70px;}
+.footer-logo img {
+    border: none; 
+    margin: auto;
+    width: 90px; 
+    height: 80px;
+}
 
+#footer .bottom .copyright{ 
+    height: 85px;
+    text-align: center;
+    font-size: 15px;
+    
+}
 
-#footer .bottom .site {float: right; position: absolute; left: 80%; top: 10%; background-color: tomato; margin: 0;}
-#footer .bottom .social {display: flex; list-style: none; margin: 0; padding: 0; background-color: cyan;}
-#footer .bottom .social a  {display: block; margin-right: 30px; padding: 0;  font-size: 30px; text-decoration: none; line-height: 2em; text-align: center;}
+#footer .bottom .site { 
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    height: 85px;
+    
+  
+}
+#footer .bottom .social {
+    display: flex; 
+    list-style: none; 
+    margin: 0;
+    
+ 
+}
+#footer .bottom .social li {
+    margin: auto;
+   
+}
+#footer .bottom .social a  {
+    color: gray;
+    display: block; 
+    margin-right: 30px; 
+    padding: 0;  
+    font-size: 30px; 
+    text-decoration: none; 
+    line-height: 2em; 
+    text-align: center;
+}
+
+.clear{
+    clear: both;
+}
+
+    .col-m-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+    .col-m-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+@media screen and (min-width: 767px) {
+
+    .col-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+    .col-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .footer-logo {
+        
+        display: block;
+        padding-top: 2px;
+        padding-left: 40px;
+        height: 85px;
+        
+    }
+   
+
+    header#header {display: block;}
+    header#mheader {display: none;}
+
+    
+
+  }

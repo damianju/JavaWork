@@ -1,16 +1,14 @@
 @charset "UTF-8";
+
+*{box-sizing: border-box;}
+
 .conA {
-    
-    margin-left: 160px;
-    padding: 0px 50px;
+    margin-left: 0px;
+    padding: 0px 15px;
 }
 
 .conA .container h1{
     margin-top: 0;
-}
-
-.conA .container .table {
-    vertical-align: middle;
 }
 
 .conA .container form {
@@ -26,24 +24,67 @@
     font-family: seo;
     font-size: 20px;
     border-bottom: 1px dotted #666;
-    width: 900px;
+    width: 450px;
     padding: 5px 0;
+    
 }
 
 .conA .container form label {
-    width: 140px;
-    float: left;
+    white-space: nowrap;
+    
 }
 
-.conA .container form input {
-    margin: 5px 0; 
-    background-color: #FCFDEA;
+.conA .container form input, .conA .container form select {
+    
+    padding: 10px;
+    
+
+}
+
+.conA .container form #gender {
+    margin: 10px;
 }
 
 
-.conA .container form input.dup{
-    width: 120px;
-    height: 23px;
-    border-radius: 5px;
+.btn_t1 {
     border: none;
+    color: #FFF;
+    background-color: green;
+    font-size: 18px;
+    padding: 12px 30px;
+    line-height:  15px;
+    text-align:  center;
+    border-radius: 3px;
+}
+
+.btn_t2 {
+    width: 100%;
+    border: none;
+    color: #FFF;
+    background-color: green;
+    font-size: 18px;
+    padding: 12px 30px;
+    line-height:  15px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align:  center;
+    border-radius: 3px;
+}
+
+
+@media screen and (min-width: 767px) {
+    
+    .conA {
+        margin-left: 160px;
+    }
+
+    .conA .container form legend {
+        width: 600px; 
+    }
+
+    .btn_t2 {
+        position: relative;
+        left: 75%;
+        width: auto;
+    }
 }

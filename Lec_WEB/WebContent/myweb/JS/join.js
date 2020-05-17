@@ -1,6 +1,7 @@
 // email 패턴에 대한 정규표현식
 var emailPat = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 
+
 function vaildateInfo() {
 
     var frm = document.forms.form1;
@@ -8,6 +9,12 @@ function vaildateInfo() {
     if(frm['name'].value.trim()==""){
         alert("※ 기본 정보 누락: 이름을 입력해주세요");
         frm['name'].focus();
+        return false;
+    }
+
+    if(frm['birthday'].value.trim()==""){
+        alert("※ 기본 정보 누락: 생녕월일을 입력해주세요");
+        frm['birthday'].focus();
         return false;
     }
 
@@ -57,5 +64,13 @@ function vaildateInfo() {
         frm['email_id'].focus();
         return false;
         }
+    
     return true;
 }
+
+function onlyNumber(){
+    if((event.keyCode<48)||(event.keyCode>57)) event.returnValue = false;
+}
+
+
+

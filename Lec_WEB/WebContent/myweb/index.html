@@ -5,12 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEX</title>
+    <title>VIVA MEX: HOME</title>
     <link href ="CSS/common.css" rel="stylesheet" type="text/css">
-    <link href ="CSS/RWD.css" rel="stylesheet" type="text/css">
-    <link href ="CSS/front.css" rel="stylesheet" type="text/css">
+    <link href ="CSS/index.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="http://download.seaicons.com/download/i85835/custom-icon-design/2014-world-cup-flags/custom-icon-design-2014-world-cup-flags-mexico.ico">
+    <link rel="icon" href="http://download.seaicons.com/download/i85835/custom-icon-design/2014-world-cup-flags/custom-icon-design-2014-world-cup-flags-mexico.ico">
     
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="JS/common.js" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <body>
     <div id="wrapper">
@@ -23,7 +27,7 @@
                             <span>|</span>
                             <a href="join.html">회원가입</a>
                             <span>|</span>
-                            <a href="#">검색</a>
+                            <a href="#" id="search">검색</a>
                         </div>
                     </div>
                 </div>
@@ -43,11 +47,10 @@
                     <div class="clear"></div>
                     
                     <div class="menu">
-                        <a href="index.html">HOME</a>
-                        <a href="#">NEWS</a>
-                        <a href="#">BUSINESS</a>
-                        <a href="#">IMAGE</a>
-                        <a href="#">INFO</a>
+                        <a href="#">생활정보</a>
+                        <a href="job.html" id="business">비즈니스</a>
+                        <a href="#">사진첩</a>
+                        <a href="#">공지사항</a>
                     </div>
                 
                 </div>
@@ -61,11 +64,8 @@
                 
                     <div id ="login">
                         <div class="link">
-                            <a href="#">로그인</a>
-                            <span>|</span>
-                            <a href="join.html">회원가입</a>
-                            <span>|</span>
-                            <a href="#">검색</a>
+                            <i class="fas fa-search" id="search"></i>
+                            <i class="fas fa-bars"></i>
                         </div>
                     </div>
 
@@ -80,17 +80,17 @@
                     <div class="clear"></div>
                     
                     <div class="menu">
-                        <p>MAIN</p>
+                        <p></p>
                     </div>
-                
+            </div>   
         </header>
 
         <div class="clear"></div>
 
         <section class="conA">
             <div class="container">
-                <h1>MEX</h1>
-                <p>멕시코 교민 사이트</p>
+                <h1>VIVA! MEX!</h1>
+                <p>멕시코 교민 사이트 "VIVA MEX"가 당신의 멕시코 생활을 응원합니다</p>
             </div>
         </section>
 
@@ -133,7 +133,7 @@
                     <p>
                         <i class="far fa-images icon"></i>
                     </p>
-                    <h2>사진첩</h2>
+                    <h2>이미지</h2>
                     <p>"칸쿤2 튤룸 세노테.img"</p>
                     <a class="more" href="#">더 알아보기
                         <span class="fa fa-chevron-right" aria-hidden="true"></span>
@@ -141,6 +141,9 @@
                 </div>
             </div>
         </section>
+
+        <div class="clear"></div>
+
         <section class="conC">
             <div class= "container">
                 <div class="photo"></div>
@@ -158,34 +161,34 @@
 
         <footer id="footer">
             <div class="container">
+                <div class="col-2"></div>
                 <div class="top">
                     <div class="links">
-                        <a href="#">개인정보</a>
-                        <span>|</span>
-                        <a href="#">사이트맵</a>
-                        <span>|</span>
-                        <a href="#">이용약관</a>
-                        <span>|</span>
-                        <a href="#">법적고지</a>
+                        <a href="#" class="col-m-6 col-2"><b>개인정보</b></a>
+                        
+                        <a href="#" class="col-m-6 col-2">사이트맵</a>
+                        
+                        <a href="#" class="col-m-6 col-2">이용약관</a>
+                        
+                        <a href="#"class="col-m-6 col-2">법적고지</a>
                     </div>
                 </div>
+                <div class="col-2"></div>
                 
                 <div class="clear"></div>
 
                 <div class="bottom">
-                   
-                    <div class="footer-logo">
-                        <img src="https://seeklogo.com/images/H/hecho-en-mexico-logo-629EA3F7C3-seeklogo.com.png" alt="MEX 로고">
-                    </div> 
+
                     
-
-                    <div class="clear"></div>
-
-                    <p id="copyright">Copyright 2020 MEX all rights reserved.</p>
-
-                    <div class="clear"></div>
-                     
-                    <div class="site">
+                    <div class="footer-logo col-3">
+                        <img src="https://cdn.icon-icons.com/icons2/1555/PNG/512/fast-food-icons-freetaco_107421.png" alt="MEX 로고"/>
+                    </div> 
+                
+                    <div class="copyright col-6 col-m-12">
+                        <p>Copyright 2020 VIVA MEX all rights reserved.</p>
+                    </div>
+        
+                    <div class="site col-3">
                         <ul class="social">
                             <li class="facebook">
                                 <a href="#">
@@ -222,4 +225,5 @@
         </footer>
     </div>
 </body>
+
 </html>

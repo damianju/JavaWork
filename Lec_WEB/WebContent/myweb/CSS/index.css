@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+*{box-sizing: border-box;}
+
 .conA{
     display: flex;
     align-items: center;
@@ -12,8 +14,21 @@
     color: #fff;
     color: var(--text-bright-color);
     text-align: center;
+    opacity: 0.8;
 }
 
+.conA h1 {
+    color: white;
+    font-size: 115px;
+    margin: 0;
+}
+
+.conA p {
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    
+}
 
 .conB .container{
     padding-top: 80px;
@@ -55,14 +70,14 @@
     line-height: 2em;
     border-radius: 50%;
     text-align: center;
-    background-color: #ddd;
+    background-color: #5D9AB2;
     
     /*background-color: var(--icon-bk-color);
     color: #fff;
     color: var(--icon-color);*/
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .conB .container {
         display: flex;
         max-width: 1000px;
