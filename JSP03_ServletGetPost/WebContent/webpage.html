@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>doGet() 메소드 동작 확인</title>
+</head>
+<body>
+
+<form method="post" action="Sev"><!-- form태그는 default: GET 방식 호출 -->
+	<input type="submit">
+</form>
+<br>
+<a href="Sev">클릭해보세요</a> <!-- a태그는 GET 방식 호출 , html에서 /Sev를 하면..404에러:http://localhost:8082/Sev-->
+<br>
+</body>
+</html>
