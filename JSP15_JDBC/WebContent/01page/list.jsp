@@ -10,7 +10,7 @@
 	if(pageParam != null && !pageParam.trim().equals("")){
 		try{ 
 			// 1이상의 자연수 이어야 한다
-			int p = Integer.parseInt(pageParam);
+			int p = Integer.parseInt(pageParam); 
 			if(p > 0) curPage = p;
 		} catch(NumberFormatException e){
 			// page parameter 오류는 별도의 exception 처리 안함 
@@ -21,8 +21,8 @@
 <%!
 	// JDBC 관련 기본 객체변수
 	Connection conn = null;
-	Statement stmt = null;
-	PreparedStatement pstmt = null;
+	Statement stmt = null; // SQL문을 수행하고 그 결과를 리턴함
+	PreparedStatement pstmt = null; // 향상된 Statement
 	ResultSet rs = null;   // SELECT 결과, executeQuery() 
 	int cnt = 0;   // DML 결과, executeUpdate()
 	
@@ -173,7 +173,6 @@ table, th, td {
 </jsp:include>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 
