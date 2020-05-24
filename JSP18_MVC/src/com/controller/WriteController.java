@@ -21,6 +21,8 @@ import com.command.write.WriteCommand;
 
 @WebServlet("*.do")
 public class WriteController extends HttpServlet {
+	// 직렬화: 자바 시스템 내부(JVM 메모리)에서 사용되는 객체 데이터를 외부의 자바 시스템에서 사용할 수 있도록 바이트(byte) 형태로 변환
+	// 직렬화 사용 고유 아이디 (선언하지 않으면 디폴트값 설정됨)
 	private static final long serialVersionUID = 1L;
        
     public WriteController() {
@@ -39,12 +41,13 @@ public class WriteController extends HttpServlet {
 	protected void actionDo (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("actionDo() 호출");
 		
+		// POST 방식에서 폼 태크 입력 값이 JSP 파일로 전송 될 때 한글이 깨지지 않도록 인코딩 처리
 		request.setCharacterEncoding("utf-8");
 		
 		// 컨트롤러는 다음 두 개를 선택해야 한다.
 		
 		String viewPage = null; // 어떠한 뷰?--> 페이지
-		Command command = null; // 어떠한 커맨드?--> 어떤한 로직 수행
+		Command command = null; // 어떠한 커맨드?--> 어떠한 로직 수행
 		
 		// URL로부터 URI, ContextPath, Command 분리
 		String uri = request.getRequestURI(); // JSP18_MVC/list.do
@@ -57,7 +60,7 @@ public class WriteController extends HttpServlet {
 		System.out.println("conPath: "+conPath);
 		System.out.println("com: "+com);
 		
-		// 컨트롤러는 커맨드에 따라, 로직을 수행학 결과를 내보낼 view를 결정한다.
+		// 컨트롤러는 커맨드에 따라, 로직을 수행할 결과를 내보낼 view를 결정한다.
 		switch(com) {
 		case "/list.do":
 			command = new ListCommand();
@@ -97,10 +100,15 @@ public class WriteController extends HttpServlet {
 			
 		} // end switch
 		
-		// request를 위에서 결정된 view에 forward 해줌
+		// request를 위에서 결정된 viewPage에 forward 해줌
 		if(viewPage != null) {
+			// RequestDispatcher: client 로부터 request을 받아 서버의 다른 resource(servlet, HTML file, or JSP file)로 넘겨주는 클래스
 			RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 			dispatcher.forward(request, response);
-		}
+		} // end if
 	}
-}
+} // end class
+
+// getRequestDispatcher()
+	// 매개변수: path name("/"로 시작함).
+	// 리턴값: RequestDispatcher 객체 (resource wrapper) or null

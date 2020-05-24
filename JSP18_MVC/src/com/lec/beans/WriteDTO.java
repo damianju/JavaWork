@@ -1,6 +1,6 @@
 package com.lec.beans;
 
-// DTO : Data Trasfer Object
+// DTO : Data Transfer Object
 //    데이터를 담아 나르기 위한 객체
 
 // 게시글DTO, 회원DTO, ... 필요한 데이터 객체들 만큼 정의

@@ -29,7 +29,7 @@ public class UpdateCommand implements Command {
 			
 		}//end if
 		
-		request.setAttribute("update_uid", uid);
+		
 		request.setAttribute("updateOk", cnt);
 		
 	} // end execute()

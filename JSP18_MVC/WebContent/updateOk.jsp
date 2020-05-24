@@ -4,7 +4,7 @@
 
 
 <% 
-	int uid = (Integer)request.getAttribute("update_uid");
+	int uid = Integer.parseInt(request.getParameter("uid"));
 	int cnt = (Integer)request.getAttribute("updateOk");
 
 %>

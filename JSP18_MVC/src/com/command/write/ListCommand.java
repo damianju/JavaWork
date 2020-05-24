@@ -24,7 +24,7 @@ public class ListCommand implements Command {
 			request.setAttribute("list", arr);
 			
 		} catch(SQLException e) { 
-			// 만약 CP 사용한다면
+			// 만약 CP(connection pool) 사용한다면
 			// NamingException 도 처리해야 함.
 			
 			e.printStackTrace();
