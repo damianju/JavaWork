@@ -120,7 +120,7 @@
 
 				</Context>
 				
-			<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/><Context docBase="JSP10_ActionTag" path="/JSP10_ActionTag" reloadable="true" source="org.eclipse.jst.jee.server:JSP10_ActionTag"/></Host>
+			<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/><Context docBase="JSP10_ActionTag" path="/JSP10_ActionTag" reloadable="true" source="org.eclipse.jst.jee.server:JSP10_ActionTag"/><Context docBase="JSP21_EL" path="/JSP21_EL" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_EL"/><Context docBase="JSP09_ImplicitObject" path="/JSP09_ImplicitObject" reloadable="true" source="org.eclipse.jst.jee.server:JSP09_ImplicitObject"/><Context docBase="JSP22_JSTL" path="/JSP22_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSP22_JSTL"/></Host>
 		</Engine>
 	</Service>
 </Server><!-- <Context docBase="JSP17_ConnectionPool" path="/JSP17_ConnectionPool" 
