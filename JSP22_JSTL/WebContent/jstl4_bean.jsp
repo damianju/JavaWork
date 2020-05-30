@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="com.lec.beans.*" %>
 <%@ page import="java.util.*" %>
+
 <%-- JSTL core 라이브러리 포함 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -13,26 +14,27 @@
 </head>
 <body>
 <%
-	Person chang = new Person ();
+	Person chang = new Person();
 	chang.setName("장윤성");
 	chang.setAge(27);
 %>
 
-<c:set var = "dto" value = "<%= chang %>"/>
+<c:set var = "dto" value = "<%=chang %>"/>
 이름: ${dto.name }<br> <%-- 내부적으로 dto.getName() 호출 --%>
 나이: ${dto.age }<br>
 dto: ${dto }<br> <%-- toString() 호출 --%>
 
 <hr>
 <%-- EL은 bean 객체의 내용을 읽어올 수 있다 --%>
-<jsp:useBean id="p0" class="com.lec.beans.Person">
+ <jsp:useBean id="p0" class="com.lec.beans.Person">
 	<jsp:setProperty name="p0" property="name" value="홍성용"/>
 	<jsp:setProperty name="p0" property="age" value="28"/>
 </jsp:useBean>
 
+
 이름: ${p0.name }<br>
 나이: ${p0.age }<br>
-p0: ${p0 }<br>
+p0: ${p0 }<br> 
 
 <%-- 빈(bean) 배열의 경우 --%>
 <%

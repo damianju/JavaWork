@@ -65,7 +65,7 @@ public class WriteController extends HttpServlet {
 		case "/list.do":
 			command = new ListCommand();
 			command.execute(request, response);
-			viewPage = "list.jsp";
+			viewPage = "/list.jsp";
 			break;
 		case "/write.do":
 			viewPage = "write.jsp";
