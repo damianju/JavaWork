@@ -18,16 +18,14 @@ public class SelectCommand implements Command {
 		// 매개변수 받아오기
 		int uid = Integer.parseInt(request.getParameter("uid"));
 		
-		if(arr == null || arr.length == 0) {
+		try {
+			arr = dao.selectByUid(uid);
 			
-			try {
-				arr = dao.selectByUid(uid);
-				
-				request.setAttribute("update", arr);
-			}catch (SQLException e) {
-				e.printStackTrace();
-			}
+			request.setAttribute("update", arr);
+		}catch (SQLException e) {
+			e.printStackTrace();
 		}
+		
 	}
 
 }

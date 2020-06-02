@@ -131,7 +131,7 @@
 
 				<Context docBase="JSP21_EL" path="/JSP21_EL" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_EL"/>
 				<Context docBase="JSP22_JSTL" path="/JSP22_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSP22_JSTL"/>
-			</Host>
+			<Context docBase="JSPEX_WebEditor" path="/JSPEX_WebEditor" reloadable="true" source="org.eclipse.jst.jee.server:JSPEX_WebEditor"/><Context docBase="JSP12_Session" path="/JSP12_Session" reloadable="true" source="org.eclipse.jst.jee.server:JSP12_Session"/><Context docBase="JSP20_FileUpload" path="/JSP20_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:JSP20_FileUpload"/></Host>
 		</Engine>
 	</Service>
 </Server><!-- <Context docBase="JSP17_ConnectionPool" path="/JSP17_ConnectionPool" 

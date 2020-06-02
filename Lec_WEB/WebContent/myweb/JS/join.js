@@ -36,7 +36,7 @@ function vaildateInfo() {
         return false;
     }
 
-    if(frm['password'].value.trim() !== frm['chkPassword'].value.trim()){
+    if(frm['password'].value.trim() != frm['chkPassword'].value.trim()){
         alert("※ 비밀번호 불일치: 비밀번호가 일치하지 않습니다");
         frm['chkPassword'].focus();
         return false;

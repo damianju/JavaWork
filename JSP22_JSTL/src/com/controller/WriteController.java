@@ -45,7 +45,6 @@ public class WriteController extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		// 컨트롤러는 다음 두 개를 선택해야 한다.
-		
 		String viewPage = null; // 어떠한 뷰?--> 페이지
 		Command command = null; // 어떠한 커맨드?--> 어떠한 로직 수행
 		
