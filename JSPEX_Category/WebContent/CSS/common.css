@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+#mycate select{
+	min-height: 40px;
+	min-width: 100px;
+}

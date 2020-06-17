@@ -18,7 +18,7 @@
 	
 		<script>
 			alert("수정 성공");
-			location.href = "view.do?uid=${param.uid}";
+			location.href = "view.do?uid=${uid}"; <%-- 수정--%>
 		</script>
 	
 	</c:otherwise>
