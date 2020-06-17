@@ -71,13 +71,13 @@ function updateList(jsonObj){
 
 			//window.depth ++;
 			//alert(depth);
-		return true;
+		//return true;
 	} else{
 		//alert("에러1");
 		alert(jsonObj.message);
-		return false;
+		//return false;
 	} 
-	return false;
+	//return false;
 } // end updateList()
 
 

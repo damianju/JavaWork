@@ -26,7 +26,6 @@ public class AjaxListCommand implements Command {
 			result.setCount(dtoArr.length);
 			result.setList(Arrays.asList(dtoArr));
 		}
-		
 
 		ObjectMapper mapper = new ObjectMapper();
 		

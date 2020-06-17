@@ -99,7 +99,10 @@ public class CategoryListCommand implements Command {
 						arr = dao.selectByCategory(depth, parent);
 
 						if (arr == null) {
-							message.append("0개의 데이터");
+							parent = 0;
+							arr = dao.selectByCategory(depth, parent);
+							status = "OK";
+							//message.append("0개의 데이터");
 						} else {
 							status = "OK";
 						}
@@ -112,7 +115,7 @@ public class CategoryListCommand implements Command {
 					}
 
 				} else {
-
+ 
 					try {
 						arr = dao.selectByCategory(depth, parent);
 						if (arr == null) {

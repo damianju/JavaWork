@@ -78,7 +78,7 @@ public class CategoryDAO {
 			rs = pstmt.executeQuery();
 			arr = createArray(rs);
 		} finally {
-			close();
+			closeWithConn();
 		}
 		return arr;
 		
