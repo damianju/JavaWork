@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="score2" class="com.lec.beans.Score">
+		<constructor-arg index="0" value="55"/>
+		<constructor-arg index="1" value="66"/>
+		<constructor-arg index="2" value="23"/>
+		<constructor-arg index="3" value="이것도 점수냐"/>
+	</bean>
+	
+	<!--  복수개의 설정파일로부터 생성하는 컨텍스트의 경우 중복되는 id가 있을 경우. 나중에 생성되는 bean이 덮어쓰기 한다. -->
+	<bean id="score1" class="com.lec.beans.Score">
+		<constructor-arg index="0" value="4"/>
+		<constructor-arg index="1" value="8"/>
+		<constructor-arg index="2" value="1"/>
+		<constructor-arg index="3" value="꽝"/>
+	</bean>
+</beans>
