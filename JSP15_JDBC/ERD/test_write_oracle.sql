@@ -45,3 +45,23 @@ SELECT * FROM TEST_WRITE ORDER BY WR_UID DESC;
 INSERT INTO TEST_WRITE (WR_UID , WR_SUBJECT , WR_CONTENT , WR_NAME ) SELECT TEST_WRITE_SEQ.NEXTVAL, WR_SUBJECT , WR_CONTENT , WR_NAME FROM TEST_WRITE ;
 
 DELETE FROM TEST_WRITE WHERE WR_UID >10;
+
+SELECT * 
+FROM
+	(SELECT ROWNUM AS RNUM, T.* FROM (SELECT * FROM test_write ORDER BY wr_uid DESC) T) 
+WHERE 
+	RNUM >= 8 AND RNUM < 10;
+	
+
+SELECT 
+			RNUM
+			, wr_uid "uid"
+			, wr_subject subject
+			, wr_content content
+			, wr_name name
+			, wr_viewcnt viewcnt
+			, wr_regdate regdate  
+		FROM
+			(SELECT ROWNUM AS RNUM, T.* FROM (SELECT * FROM test_write ORDER BY wr_uid DESC) T) 
+		WHERE 
+			RNUM >= 9 AND RNUM < 18;

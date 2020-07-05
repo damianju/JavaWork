@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/CSS/common.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="${pageContext.request.contextPath }/JS/board.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 <title>SPA 게시판</title>
 </head>
