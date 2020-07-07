@@ -48,7 +48,7 @@ public class Array13Main {
 		System.out.println(arr8 == arr9);
 		System.out.println(Arrays.equals(arr8, arr9));
 		
-		// 
+		//  
 
 	} // end main
 

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" saveSeparateContextFiles="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="90" stop-timeout="15" testEnvironment="false" timestamp="83">
-  <list key="modules" value0="STS19_REST::org.eclipse.jst.jee.server:STS19_REST::jst.web::2.5" value1="JSPEX_AJAX_SPA::org.eclipse.jst.jee.server:JSPEX_AJAX_SPA::jst.web::4.0" value2="JavaPrj::org.eclipse.jst.jee.server:JavaPrj::jst.web::4.0"/>
+<server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" saveSeparateContextFiles="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="90" stop-timeout="15" testEnvironment="false" timestamp="85">
+  <list key="modules" value0="STS18_Security::org.eclipse.jst.jee.server:STS18_Security::jst.web::2.5"/>
 </server>

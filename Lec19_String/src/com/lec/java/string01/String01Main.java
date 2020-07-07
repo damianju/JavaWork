@@ -79,14 +79,14 @@ public class String01Main {
 			System.out.println(newUrl);
 		}
 		
-		
+		 
 		System.out.println();
 		System.out.println("split(regex)"); // 문자열을 주어진 문자열로 쪼개어 String[] 리턴
 		String str4 = "HH:MM:SS";
 		String[] strings = str4.split(":");
 		System.out.println(Arrays.toString(strings));
 		// 공백기준으로 쪼갤때는 정규표현식의 \\s+  사용하기 : 공백, 탭, 줄바꿈
-		// TODO		
+		// TODO		 
 		
 		// 단!  "|" 을 할경우는 주의,   ※ split(정규표현식) 을 사용하는 메소드임
 		

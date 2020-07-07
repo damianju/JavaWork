@@ -54,7 +54,7 @@ public class File16Main {
 		} else { // 파일이 존재한다면
 			System.out.println("파일이 이미 존재합니다");
 		}
-
+ 
 		System.out.println();
 		// 파일 이름 변경: renameTo()
 		// renameTo()를 이용해서 다른 폴더로 이동(move)를 할 수도 있다.

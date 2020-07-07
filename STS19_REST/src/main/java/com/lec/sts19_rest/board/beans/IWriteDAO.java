@@ -2,7 +2,6 @@ package com.lec.sts19_rest.board.beans;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
 import org.mybatis.spring.annotation.MapperScan;
 
 
@@ -16,6 +15,7 @@ public interface IWriteDAO {
 	//public int update(final BWriteDTO dto);
 	public int update(int uid, String subject, String content);
 	public int deleteByUid(final int uid);
+	public int deleteByUid(final int[] uid);
 	public int incViewCnt(int uid); // 조회수 증가
 	
 	
